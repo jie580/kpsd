@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingLeft="44dp"
+    android:paddingRight="44dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:background="@drawable/shape_white_10_corner"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tab0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="全部"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="#000"
+        android:text="项目"/>
+
+
+    <TextView
+        android:id="@+id/tab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="#000"
+        android:text="商品"/>
+
+    <TextView
+        android:id="@+id/tab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="#000"
+        android:text="服务"/>
+
+</LinearLayout>

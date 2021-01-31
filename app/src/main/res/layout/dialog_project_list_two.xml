@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_top_left_right_30"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:text="发送项目"
+                    android:textSize="16dp"
+                    android:textColor="#000"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginBottom="9dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/project_list_type1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#80B5FF"
+                        android:text="我发布的"/>
+
+                    <TextView
+                        android:id="@+id/project_list_type2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="38dp"
+                        android:text="我接单的"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/noneData"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <ImageView
+                            android:layout_width="263dp"
+                            android:layout_height="245dp"
+
+                            android:src="@mipmap/none_data2"/>
+                    </LinearLayout>
+                <com.ming.sjll.ui.PagedListView
+                    android:id="@+id/recyclerList"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="400dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/tv_goBack"
+                    android:layout_width="155dp"
+                    android:layout_height="59dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@mipmap/login_btn_cancel"
+                    android:scaleType="center"/>
+
+                <ImageButton
+                    android:id="@+id/tv_nextPage"
+                    android:layout_width="155dp"
+                    android:layout_height="59dp"
+                    android:scaleType="fitCenter"
+                    android:background="@mipmap/login_btn_next" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

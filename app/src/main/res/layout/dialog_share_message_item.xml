@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.ming.sjll.ui.CustomRoundAngleImageView
+            android:id="@+id/iv_header"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="31dp"
+            custom:radius="30dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                tools:text="Riley Catherine" />
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="这里就是一个简单的介绍，还有排期需要去更改。"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

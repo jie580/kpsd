@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF2F3F7"
+        android:orientation="vertical">
+
+        <com.ming.sjll.ui.StickyScrollView
+            android:id="@+id/scrollViewWarp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/titleBar"
+                    layout="@layout/title_bar"
+                    app:viewModel="@{titleViewModel}" />
+
+                <LinearLayout
+                    android:id="@+id/personWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="226dp"
+                    android:background="@mipmap/someone_person_bg"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:id="@+id/personTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+
+                                android:text="参与人员"/>
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:gravity="end|center_vertical"
+                                android:layout_marginRight="26dp"
+                                android:background="@mipmap/btn_solid_right"/>
+                    </FrameLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="333dp"
+                        android:layout_height="164dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:layout_gravity="center"
+                        android:scrollbars="none"
+                        >
+                        <LinearLayout
+                            android:id="@+id/personList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="164dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/siteWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="386dp"
+                    android:background="@mipmap/someone_goods_bg"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:id="@+id/siteTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF000000"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+
+                            android:text="使用场地"/>
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:gravity="end|center_vertical"
+                            android:layout_marginRight="26dp"
+                            android:background="@mipmap/btn_solid_right"/>
+                    </FrameLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="333dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:scrollbars="none"
+                        android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:descendantFocusability="blocksDescendants">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/siteRecyclerList"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clipChildren="false"
+                                    android:clipToPadding="false"
+                                    />
+                            </RelativeLayout>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/goodsWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="386dp"
+                    android:background="@mipmap/someone_goods_bg"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:id="@+id/goodsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF000000"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+
+                            android:text="使用道具"/>
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:gravity="end|center_vertical"
+                            android:layout_marginRight="26dp"
+                            android:background="@mipmap/btn_solid_right"/>
+                    </FrameLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="333dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="center"
+                        android:scrollbars="none"
+                        >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:descendantFocusability="blocksDescendants">
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/goodsRecyclerList"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clipChildren="false"
+                                    android:clipToPadding="false"
+                                    />
+                            </RelativeLayout>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </com.ming.sjll.ui.StickyScrollView>
+
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+</layout>

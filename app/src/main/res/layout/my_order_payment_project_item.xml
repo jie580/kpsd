@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/warp"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/line_input_bg_big7"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginLeft="19dp">
+
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/image"
+                android:layout_width="137dp"
+                android:layout_height="74dp"
+                android:scaleType="centerCrop"
+                custom:radius="5dp"
+                android:src="@mipmap/ic_launcher"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="春季产品拍摄"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="#FF000000"
+                        android:textSize="16sp"/>
+
+                    <Button
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:background="@mipmap/btn_more"
+                        android:layout_gravity="right"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text2Tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易金額"
+                        android:textColor="#FF000000"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="修图师"
+                        android:gravity="right"
+                        android:textColor="#FF000000"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12月5日-12月5日"
+                        android:textColor="#FFD7DAE5"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/openInfo"
+                android:layout_width="114dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="54dp"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/btn_look_project"/>
+
+            <TextView
+                android:id="@+id/countDown"
+                android:layout_width="160dp"
+                android:layout_height="33dp"
+                android:background="@drawable/shape_red_30_corner"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="确认加入 | 59m59s"/>
+
+            <LinearLayout
+                android:id="@+id/btns"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_red_30_corner"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/otherPay"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="找人代付"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:textColor="#fff"/>
+                <TextView
+                    android:id="@+id/pay"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="付款"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="315dp"
+            android:layout_height="1.5dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_line_halving"/>
+
+
+        <LinearLayout
+            android:id="@+id/fillWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="19dp"
+                    android:text="更改后薪酬"
+                    android:textColor="#FF000000"
+                    />
+
+                <TextView
+                    android:id="@+id/revised_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="2000"
+                    android:layout_marginRight="19dp"
+                    android:textColor="#FF000000"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:id="@+id/balanceTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="19dp"
+                    android:text="应补薪酬"
+                    android:textColor="#FF000000"
+                    />
+
+                <TextView
+                    android:id="@+id/balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="3，000"
+                    android:layout_marginRight="19dp"
+                    android:textColor="#FF000000"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/FillingMoney"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="19dp"
+                android:background="@drawable/shape_red_30_corner"
+                android:orientation="horizontal"
+                android:visibility="gone"
+             >
+
+                <TextView
+                    android:id="@+id/otherPay2"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="找人代付"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:textColor="#fff"/>
+                <TextView
+                    android:id="@+id/pay2"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="付款"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/refundWrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginRight="19dp">
+
+                <TextView
+                    android:id="@+id/refund"
+                    android:layout_width="114dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/shape_blue_50_corner"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="退至钱包"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="315dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/ic_line_halving"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@mipmap/line_project_flow_sample_upload_item_bg"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/headImage"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="22dp"
+                android:src="@mipmap/ic_launcher"
+                custom:radius="6dp"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#FF000000"
+                    android:textStyle="bold"
+                    android:text="222"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:id="@+id/occupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#FF000000"
+                    android:textStyle="bold"
+                    android:text="222"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/contentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#80B5FF"
+                android:textSize="16sp"
+                android:background="@drawable/shape_left_right_normal_tag"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textStyle="bold"
+                android:layout_marginRight="19dp"
+                android:layout_marginLeft="2dp"
+                android:text="联系对方"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

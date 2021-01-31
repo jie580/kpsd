@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_bar"
+            bind:viewModel="@{titleViewModel}" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="65dp"
+                android:maxLength="11"
+                android:background="@mipmap/search_bg"
+                android:textColor="#ffffff"
+                android:textCursorDrawable="@color/LL_CCFFFF"
+                android:inputType="text"
+                android:text=""
+                android:textStyle="normal"
+                android:textSize="18sp" />
+            <ImageView
+                android:id="@+id/searchBtn"
+                android:layout_width="29.59dp"
+                android:layout_height="27.72dp"
+                android:background="@mipmap/search_bg_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                />
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_my_colleague"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>

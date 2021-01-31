@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/message_bg"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/showWorks"
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            android:background="@mipmap/message_top_bg">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:src="@mipmap/ic_hi"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="57dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收到"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:id="@+id/readCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="4"
+                    android:textSize="16sp"
+                    android:textColor="#0A3FFF"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个新消息等待查看"
+                    android:textSize="16sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+            <RadioGroup
+
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="61dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="个人"
+                    android:textColor="@color/selector_tab_text_color"
+                    android:textSize="16sp" />
+                <View
+                    android:id="@+id/rb_1_red"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/shape_red_30_corner"/>
+
+                <RadioButton
+                    android:id="@+id/rb_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="项目组"
+                    android:textColor="@color/selector_tab_text_color"
+                    android:textSize="16sp" />
+                <View
+                    android:id="@+id/rb_2_red"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/shape_red_30_corner"/>
+
+
+                <RadioButton
+                    android:id="@+id/rb_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="通知"
+                    android:textColor="@color/selector_tab_text_color"
+                    android:textSize="16sp" />
+                <View
+                    android:id="@+id/rb_3_red"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/shape_red_30_corner"/>
+
+            </RadioGroup>
+        </RelativeLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_marginTop="117dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</LinearLayout>

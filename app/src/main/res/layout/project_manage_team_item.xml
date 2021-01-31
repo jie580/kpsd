@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:minHeight="100dp"
+        android:layout_gravity="center_horizontal"
+        >
+    <RelativeLayout
+        android:id="@+id/contentAddWrap"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:minHeight="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_white_30_corner"
+        android:visibility="visible"
+       >
+
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="11dp"
+            android:background="@mipmap/ic_launcher"/>
+
+        <ImageView
+            android:id="@+id/addMemberBtn"
+            android:layout_width="83dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="136dp"
+            android:layout_marginTop="70dp"
+            android:background="@mipmap/team_btn_add"/>
+
+        <ImageView
+            android:id="@+id/addRecruitBtn"
+            android:layout_width="83dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="242dp"
+            android:layout_marginTop="70dp"
+            android:background="@mipmap/team_btn_recruit"/>
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/btn_edit" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="117dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/horizontalOccupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="38dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/guide1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="61dp"
+                            android:src="@mipmap/team_btn1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/guide2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="61dp"
+                            android:src="@mipmap/team_btn2"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/guide3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="61dp"
+                            android:src="@mipmap/team_btn3"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/guide4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="61dp"
+                            android:src="@mipmap/team_btn4"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            <HorizontalScrollView
+                android:id="@+id/listViewHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:id="@+id/userLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/transparent"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_vertical">
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="53dp"-->
+<!--                        android:layout_height="63dp"-->
+<!--                        android:background="@color/transparent"-->
+<!--                        android:clipChildren="false"-->
+<!--                        android:clipToPadding="false"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        >-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="53dp"-->
+<!--                            android:layout_height="63dp"-->
+<!--                            android:clipChildren="false"-->
+<!--                            android:clipToPadding="false">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="63dp"-->
+<!--                                android:layout_height="63dp"-->
+<!--                                android:scaleType="centerCrop"-->
+<!--                                android:background="@mipmap/ic_launcher"-->
+<!--                                />-->
+<!--                        </LinearLayout>-->
+
+
+
+<!--                    </LinearLayout>-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="63dp"-->
+<!--                        android:layout_height="63dp"-->
+<!--                        android:background="@color/transparent"-->
+<!--                        android:clipChildren="false"-->
+<!--                        android:clipToPadding="false"-->
+<!--                        android:layout_marginRight="-19dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        >-->
+
+<!--                        <com.ming.sjll.ui.CircleImageView-->
+<!--                            android:layout_width="63dp"-->
+<!--                            android:layout_height="63dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@mipmap/ic_launcher"/>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="63dp"-->
+<!--                        android:layout_height="63dp"-->
+<!--                        android:background="@color/transparent"-->
+<!--                        android:clipChildren="false"-->
+<!--                        android:clipToPadding="false"-->
+<!--                        android:layout_marginRight="-19dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        >-->
+
+<!--                        <com.ming.sjll.ui.CircleImageView-->
+<!--                            android:layout_width="63dp"-->
+<!--                            android:layout_height="63dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@mipmap/ic_launcher"/>-->
+
+<!--                    </LinearLayout>-->
+
+
+<!--                    <com.ming.sjll.ui.CircleImageView-->
+<!--                        android:id="@+id/image"-->
+<!--                        android:layout_width="63dp"-->
+<!--                        android:layout_height="63dp"-->
+<!--                        android:layout_marginRight="-9dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@mipmap/ic_launcher"/>-->
+<!--                    <com.ming.sjll.ui.CircleImageView-->
+<!--                        android:layout_width="63dp"-->
+<!--                        android:layout_height="63dp"-->
+<!--                        android:layout_marginRight="-9dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@mipmap/ic_launcher"/>-->
+<!--                    <com.ming.sjll.ui.CircleImageView-->
+<!--                        android:layout_width="63dp"-->
+<!--                        android:layout_height="63dp"-->
+<!--                        android:layout_marginRight="-9dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@mipmap/ic_launcher"/>-->
+<!--                    <com.ming.sjll.ui.CircleImageView-->
+<!--                        android:layout_width="63dp"-->
+<!--                        android:layout_height="63dp"-->
+<!--                        android:layout_marginRight="-9dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@mipmap/ic_launcher"/>-->
+<!--                    <com.ming.sjll.ui.CircleImageView-->
+<!--                        android:layout_width="63dp"-->
+<!--                        android:layout_height="63dp"-->
+<!--                        android:layout_marginRight="-9dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@mipmap/ic_launcher"/>-->
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+<!--            <android.support.v7.widget.RecyclerView-->
+<!--                android:id="@+id/listViewHorizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:layout_marginLeft="17dp"-->
+<!--                android:layout_marginRight="17dp"/>-->
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:id="@+id/contentDelWrap"
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:minHeight="100dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_white_30_corner"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="106dp"
+                android:layout_height="106dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="51dp"
+                android:background="@mipmap/ic_launcher"/>
+
+
+
+            <ImageView
+                android:id="@+id/btnEditReturn"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/btn_edit_return"/>
+
+            <ImageView
+                android:id="@+id/deleteOccupation"
+                android:layout_width="89dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="254dp"
+                android:layout_marginTop="90dp"
+                android:background="@mipmap/btn_delete_occupation"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="117dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/listViewVertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

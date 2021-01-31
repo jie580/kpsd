@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    android:id="@+id/rc_audio_input_toggle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/transparent"
+    android:text="@string/rc_audio_input"
+    android:textStyle="bold"
+    android:textColor="#000"
+    android:textSize="16sp"
+    android:textAllCaps="false"/>

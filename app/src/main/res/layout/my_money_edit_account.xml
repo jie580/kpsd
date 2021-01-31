@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:background="#FFF2F3F7"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="107dp">
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/top_head"
+                custom:right_bottom_radius="40dp"
+                custom:left_bottom_radius="40dp" />
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/personageWrap"
+                android:layout_width="360dp"
+                android:layout_height="277dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:background="@mipmap/line_input_bg_big10"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="38dp"
+                    android:textSize="16sp"
+                    android:textColor="#FF000000"
+                    android:gravity="center"
+                    android:text="账户类型"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="29dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="个人"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="#FF80B5FF"/>
+
+                    <TextView
+                        android:id="@+id/toCompany"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="公司"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="#FFD7DAE5"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="301.5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="姓名"
+                                android:textColor="#FFD7DAE5"
+                                android:textSize="16sp"/>
+                            <EditText
+                                android:id="@+id/name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="right"
+                                android:textColor="#FF0A3FFF"
+                                android:textSize="16sp"
+                                android:text=""/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_marginTop="9dp"
+                            android:background="#FF80B5FF" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="支付宝账号"
+                                android:textColor="#FFD7DAE5"
+                                android:textSize="16sp"/>
+                            <EditText
+                                android:id="@+id/account"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="right"
+                                android:textColor="#FF0A3FFF"
+                                android:textSize="16sp"
+                                android:text=""/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_marginTop="9dp"
+                            android:background="#FF80B5FF" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/companyWrap"
+            android:layout_width="360dp"
+            android:layout_height="340dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@mipmap/line_input_bg_big11"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:textSize="16sp"
+                android:textColor="#FF000000"
+                android:gravity="center"
+                android:text="账户类型"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/toPersonage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="个人"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="#FFD7DAE5"
+                   />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="公司"
+                    android:gravity="center"
+                    android:textSize="16sp"
+
+                    android:textColor="#FF80B5FF"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="301.5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="名称"
+                            android:textColor="#FFD7DAE5"
+                            android:textSize="16sp"/>
+                        <EditText
+                            android:id="@+id/card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:textColor="#FF0A3FFF"
+                            android:textSize="16sp"
+                            android:text=""/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="9dp"
+                        android:background="#FF80B5FF" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="账号"
+                            android:textColor="#FFD7DAE5"
+                            android:textSize="16sp"/>
+                        <EditText
+                            android:id="@+id/bank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:textColor="#FF0A3FFF"
+                            android:textSize="16sp"
+                            android:text=""/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="9dp"
+                        android:background="#FF80B5FF" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开户行"
+                            android:textColor="#FFD7DAE5"
+                            android:textSize="16sp"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:textColor="#FF0A3FFF"
+                            android:textSize="16sp"
+                            android:text=""/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="9dp"
+                        android:background="#FF80B5FF" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="355dp"
+                android:layout_height="49dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="48dp"
+                android:background="@drawable/shape_blue_50_corner_2"
+                android:text="添加"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/message_bg"
+            android:scaleType="centerCrop" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/chatBtnWrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/shape_bottom_left_right_chat">
+                <include
+                    layout="@layout/title_bar"
+                    bind:viewModel="@{titleViewModel}" />
+
+                <LinearLayout
+                    android:id="@+id/singleChatBtn"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+                    <ImageView
+                        android:id="@+id/cooperation"
+                        android:layout_width="48dp"
+                        android:layout_height="54dp"
+                        android:layout_marginLeft="86dp"
+                        android:background="@mipmap/chat_cooperation"/>
+
+                    <ImageView
+                        android:id="@+id/sendProject"
+                        android:layout_width="48dp"
+                        android:layout_height="54dp"
+                        android:layout_marginLeft="109dp"
+                        android:background="@mipmap/chat_send_project"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/groupChatBtn"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:id="@+id/openProjectManage"
+                    android:layout_width="124dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="54dp"
+                    android:background="@mipmap/chat_group_btn1"/>
+
+                <ImageView
+                    android:id="@+id/openFlow"
+                    android:layout_width="124dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@mipmap/chat_group_btn2"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:orientation="vertical">
+                    <FrameLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:background="@color/transparent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

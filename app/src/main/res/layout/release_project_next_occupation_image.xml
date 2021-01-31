@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <com.ming.sjll.ui.CustomRoundAngleImageView
+            android:id="@+id/iv_img"
+            android:layout_width="67.02dp"
+            android:layout_height="67.02dp"
+            android:scaleType="centerCrop"
+            custom:radius="15dp"
+            android:background="@mipmap/ic_launcher"/>
+
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="-6dp"
+            android:layout_marginRight="-6dp"
+            android:src="@mipmap/btn_delete" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_add"
+        android:layout_width="81dp"
+        android:layout_marginTop="9dp"
+        android:layout_height="81dp"
+        android:src="@mipmap/btn_add" />
+
+</LinearLayout>

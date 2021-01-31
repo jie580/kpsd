@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+
+    android:clipToPadding="false"
+
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:cardCornerRadius="30dp"
+
+            app:cardElevation="0dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="54dp">
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="56dp">
+                    <ImageView
+                        android:id="@+id/units1"
+                        android:layout_width="0dp"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/units_1" />
+
+                    <ImageView
+                        android:id="@+id/units2"
+                        android:layout_width="0dp"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/units_2" />
+
+                    <ImageView
+                        android:id="@+id/units3"
+                        android:layout_width="0dp"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/units_3" />
+                    <ImageView
+                        android:id="@+id/units7"
+                        android:layout_width="0dp"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/units_7"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="162dp"
+
+                   >
+                    <ImageView
+                        android:id="@+id/units4"
+                        android:layout_width="0dp"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/units_4" />
+
+                    <ImageView
+                        android:id="@+id/units5"
+                        android:layout_width="0dp"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/units_5" />
+
+                    <ImageView
+                        android:id="@+id/units6"
+                        android:layout_width="0dp"
+                        android:layout_height="88dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/units_6" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

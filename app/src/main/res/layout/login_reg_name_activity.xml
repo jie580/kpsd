@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tv_main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="812dp"
+            android:background="@mipmap/login_reg_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="74dp"
+                android:layout_marginBottom="78dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tv_login_im_procurer"
+                        android:layout_width="154dp"
+                        android:layout_height="154dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@mipmap/login_im_procurer_b"
+                        android:clickable="false" />
+
+                    <ImageView
+                        android:id="@+id/tv_login_im_supplier"
+                        android:layout_width="117dp"
+                        android:layout_height="117dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@mipmap/login_im_supplier_a"
+                        android:clickable="true" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_login_im_procurer_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="18dp"
+                    android:gravity="start"
+                    android:singleLine="false"
+                    android:text="我是采购商
+    \n\n
+        在注册时不用标明自身职业，可随意浏览平台内容， 不会因为没有职业而受到浏览限制"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_login_im_supplier_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="18dp"
+                    android:gravity="start"
+                    android:singleLine="false"
+                    android:text="我是供应商
+    \n\n
+    在注册后应及时更改职业及公司或个人信息，以便采购商可以准确找到您。"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="28dp">
+
+                    <ImageView
+                        android:layout_width="364dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@mipmap/line_input_bg" />
+
+
+                    <EditText
+                        android:id="@+id/tv_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:hint="名字"
+                        android:inputType="text"
+                        android:maxLength="16"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <com.ming.sjll.ui.LocateCenterHorizontalView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="157dp"
+                    android:overScrollMode="never" />
+
+                <ImageButton
+                    android:id="@+id/tv_nextPage"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="78dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitCenter"
+                    android:background="@mipmap/nexe_btn" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

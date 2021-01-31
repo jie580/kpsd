@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 这里必须要套一层LinearLayout，不然在代码中设置Visibility为Gone时底部总是会有一部分空白区域 -->
+    <LinearLayout
+        android:id="@+id/control_layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e7e7e7"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:text="加载中"
+            android:textColor="#777777" />
+    </LinearLayout>
+
+</LinearLayout>

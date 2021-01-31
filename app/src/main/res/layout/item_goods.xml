@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/wrap"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="255dp">
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/imageItem"
+                android:layout_width="173dp"
+                android:layout_height="255dp"
+                custom:radius="15dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                />
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/btn_delete"
+                android:visibility="visible"/>
+            <RelativeLayout
+                android:layout_width="161dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="7dp"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/bg_goods_item">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/ic_money"/>
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="400/天"
+                    android:textColor="#FF000000"
+                    android:gravity="center"
+                    android:textSize="17sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#FF040404"
+            android:text="高级人物拍摄,要拍摄的速度预约要拍摄的速度预约要拍摄的速度预约要拍摄的速度预约.."/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/userWrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <com.ming.sjll.ui.CircleImageView
+                    android:id="@+id/headImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                     />
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="#FFD7DAE5"
+                    android:textSize="13sp"
+                    android:text="范德萨发生范德萨发撒的发大水发的是丰富的"/>
+                <ImageView
+                    android:id="@+id/collect"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/btn_collected"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

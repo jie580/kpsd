@@ -1,0 +1,8 @@
+include ':app', ':picture_library', ':ucrop', ':ncalendar', ':faceplatform-ui', ':faceplatform', ':swipecards_library', ':heartvideolib',':calendarlibrary' ,':scrawlImage_library'
+include ':progress_library'
+include ':IMKit'
+include ':IMLib'
+include ':LocationLib'
+include ':PushLib'
+include ':CropLib'
+rootProject.name='SJLL'

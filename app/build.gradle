@@ -1,0 +1,298 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.mob.sdk'
+
+android {
+    def properties = new Properties()
+    def inputStream = project.rootProject.file('local.properties').newDataInputStream()
+    properties.load(inputStream)
+
+    signingConfigs {
+        release {
+            storeFile file(properties.getProperty('KEYFILE'))
+            storePassword properties.getProperty('STOREPASSWORD')
+            keyAlias properties.getProperty('KEYALIAS')
+            keyPassword properties.getProperty('KEYPASSWORD')
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.ming.sjll"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+            //接入x5webview之后，不能使用模拟器
+//            abiFilters 'armeabi','armeabi-v7a'//, 'x86', 'x86_64'
+        }
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = [
+//                        rxhttp_okhttp: '3.12.6',
+//                        rxhttp_rxjava: 'rxjava2', //告知RxHttp你依赖的rxjava版本，可传入rxjava2、rxjava3
+//                        rxhttp_package: 'rxhttp'   //指定RxHttp相关类的生成路径，即包名
+//                ]
+//            }
+//        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.release
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            renderscript.srcDirs = ['src/main/rs', 'src/main/rs/']
+        }
+    }
+
+    /**
+     * layout 多重文件夹
+     */
+//    def listSubFile = {
+//        def resFolder = 'src/main/res/layout'
+//        def files = file(resFolder).listFiles()
+//        def folders = []
+//        files.each {
+//            item -> folders.add(item.absolutePath)
+//        }
+//        folders.add(file(resFolder).parentFile.absolutePath)
+//        return folders
+//    }
+//    sourceSets {
+//        main {
+//            res.srcDirs = listSubFile()
+//            java.srcDirs = ['src/main/java', 'src/main/java/kusd', 'src/main/java/com/ming/sjll/tool/kpsd']
+//        }
+//    }
+
+}
+MobSDK {
+    appKey "2d79181a55f41"
+    appSecret "b1c1fec8138df9c3c6579b07f4803c5d"
+    ShareSDK {
+        devInfo {
+            Wechat {
+                id 4
+                sortId 4
+                appId "wxcd430c1c832a0dc4"
+                appSecret "ba7dd903ecf215e92d6898c4bf453c0e"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 0
+                bypassApproval false
+                enable true
+            }
+            WechatMoments {
+                id 5
+                sortId 5
+                appId "wxcd430c1c832a0dc4"
+                appSecret "ba7dd903ecf215e92d6898c4bf453c0e"
+                bypassApproval false
+                enable true
+            }
+
+        }
+    }
+}
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-fragment:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'com.orhanobut:logger:2.1.1'
+    //butterknife
+    implementation 'com.jakewharton:butterknife:9.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+    //rxjava2
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'me.jessyan:autosize:1.1.2'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.32'
+
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    //ok
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    //指示器
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    //日历
+    //implementation 'com.necer.ncalendar:ncalendar:4.3.7'
+
+    //下拉选择框
+    implementation 'com.github.arcadefire:nice-spinner:1.4.3'
+
+
+//    图片加载进度
+    implementation 'com.jpeng:LoadingProgress:1.1.0'
+//    api project(':progress_library')
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+//    api fileTree(include: '*.jar', dir: 'libs')
+//    implementation 'org.xutils:xutils:3.3.36'
+    //noinspection GradleCompatible
+//    implementation 'com.android.support:appcompat-v7:24.2.1'
+//    implementation 'com.joanzapata.android:base-adapter-helper:1.1.11'
+//    implementation 'com.facebook.fresco:fresco:0.14.1'
+//    implementation 'com.github.bumptech.glide:glide:3.7.0'
+//    implementation 'com.squareup.picasso:picasso:2.5.3-SNAPSHOT'
+//    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+
+    //圆角图片
+    implementation 'org.raphets:roundimageview:1.2.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    implementation'com.github.bumptech.glide:annotations:4.3.1'
+
+    //卡片滑动
+    //implementation 'com.github.zhuchen1109:Swipe-cards:18df0b545b'
+//    implementation 'me.yuqirong:cardswipelayout:1.0.0'
+    api project(":swipecards_library")
+
+
+    implementation 'com.rxjava.rxhttp:rxhttp:1.4.3' //必须
+    annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:1.4.3' //注解处理器，生成RxHttp类,必须
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'  //切换主线程，Android工程必须
+
+    implementation 'com.rxjava.rxlife:rxlife:1.1.0'  //页面销毁，关闭请求，非必须
+
+    //Converter 根据自己需求选择  非必须  RxHttp默认内置了GsonConverter
+    implementation 'com.rxjava.rxhttp:converter-jackson:1.4.3'
+    implementation 'com.rxjava.rxhttp:converter-fastjson:1.4.3'
+    implementation 'com.rxjava.rxhttp:converter-protobuf:1.4.3'
+    implementation 'com.rxjava.rxhttp:converter-simplexml:1.4.3'
+
+
+//    implementation 'com.ljx.rxhttp:rxhttp:2.2.6'
+//    implementation('com.rxjava.rxhttp:rxhttp:x.x.x') { //xxx为RxHttp最新版本
+//        exclude group: "com.squareup.okhttp3"
+//    }
+//    implementation 'com.squareup.okhttp3:okhttp:3.12.6' //rxhttp v2.2.2版本起，需要手动依赖okhttp
+//    annotationProcessor 'com.ljx.rxhttp:rxhttp-compiler:2.2.6' //生成RxHttp类，非kotlin项目，请使用annotationProcessor代替kapt
+////    implementation 'com.ljx.rxlife:rxlife-coroutine:2.0.0' //管理协程生命周期，页面销毁，关闭请求
+
+//    //rxjava2
+//    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+//    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+//    implementation 'com.ljx.rxlife2:rxlife-rxjava:2.0.0' //管理RxJava2生命周期，页面销毁，关闭请求
+
+    //rxjava3
+//    implementation 'io.reactivex.rxjava3:rxjava:3.0.2'
+//    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+//    implementation 'com.ljx.rxlife3:rxlife-rxjava:3.0.0' //管理RxJava3生命周期，页面销毁，关闭请求
+
+    //Converter 根据自己需求选择 RxHttp默认内置了GsonConverter
+//    implementation 'com.ljx.rxhttp:converter-jackson:2.2.6'
+//    implementation 'com.ljx.rxhttp:converter-fastjson:2.2.6'
+//    implementation 'com.ljx.rxhttp:converter-protobuf:2.2.6'
+//    implementation 'com.ljx.rxhttp:converter-simplexml:2.2.6'
+
+
+
+//弹窗特效
+    compile 'com.github.rey5137:material:1.2.2'
+//    api 'cn.rongcloud.sdk:im_kit:2.9.25'
+//    api 'cn.rongcloud.sdk:im_lib:2.9.25'
+
+//    api 'cn.rongcloud.sdk:call_lib:2.9.25'
+//    api 'cn.rongcloud.sdk:call_kit:2.9.25'
+//    api 'cn.rongcloud.sdk:sight:2.9.25'
+//    api 'cn.rongcloud.sdk:rcsticker:2.9.17'
+//    api 'cn.rongcloud.sdk:redpacket:2.9.17'
+//
+//    视频播放
+//    implementation 'com.github.zhanglinkai:HeartVideo:v1.0.1'
+
+    api project(":ncalendar")
+    api project(":IMKit")
+    api project(":LocationLib")
+    api project(":PushLib")
+    api project(":picture_library")
+    api project(":faceplatform-ui")
+    api project(':CropLib')
+    api project(':heartvideolib')
+    api project(':calendarlibrary')
+    api project(':scrawlImage_library')
+
+
+    //kotlin标准库
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+//    implementation 'androidx.core:core-ktx:1.1.0'
+    //吸顶
+    implementation 'com.android.support:design:28.0.1'
+    //标签库 https://www.jianshu.com/p/3a1031f9a92d
+    implementation 'com.jetlee:FlowTagLayout:1.0.1'
+    //一款针对android平台下的图片选择器，支持从相册或拍照选择图片或视频、音频，支持动态权限获取、裁剪(单图or多图裁剪)、压缩、主题自定义配置等功能、适配android 6.0+系统的开源图片选择框架。
+    //https://github.com/LuckSiege/PictureSelector
+    // implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.7'
+    //图片上传 一个基于okhttp的标准RESTful风格的网络框架
+    //https://github.com/jeasonlzy/okhttp-OkGo
+    implementation 'com.lzy.net:okgo:3.0.4'
+
+    implementation 'com.yanzhenjie.recyclerview:support:1.3.2'
+    implementation "com.android.support:recyclerview-v7:28.0.0"
+    //动态权限
+    implementation 'com.yanzhenjie.permission:support:2.0.1'
+    //集成bugly
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+
+    //定位
+    implementation 'com.amap.api:location:latest.integration'
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //支付宝支付
+    implementation(name: 'alipaySdk-15.6.8-20191021122455-noUtdid', ext: 'aar')
+
+    api 'com.tencent.tbs.tbssdk:sdk:43697'
+
+
+    //腾讯地图
+    implementation 'com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.2.6'
+    implementation 'com.tencent.map:tencent-map-vector-sdk:4.3.4'
+    implementation 'pub.devrel:easypermissions:2.0.1'
+
+//    AutoWrapLineLayout 自动换行】
+    implementation'cn.wolfspider:autowraplinelayout:1.0.1'
+
+    implementation 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+
+}
+
+
+
+repositories {
+    maven { url "https://dl.bintray.com/rongcloud/maven" }
+}

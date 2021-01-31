@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请输入密码"
+                    android:textSize="26sp"
+                    android:textColor="#000000"/>
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="292dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/side_blue_1">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp"
+                        android:maxLength="16"
+                        android:focusable="true"
+                        android:hint="请输入至少6位新密码"
+                        android:inputType="textWebPassword"
+                        android:textColorHint="#000000"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="292dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/side_blue_1">
+
+                    <EditText
+                        android:id="@+id/repassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp"
+                        android:maxLength="16"
+                        android:focusable="true"
+                        android:hint="再次确认"
+                        android:inputType="textWebPassword"
+                        android:textColorHint="#000000"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/nextPage"
+                    android:layout_width="309dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="27dp"
+                    android:gravity="center_horizontal"
+                    android:background="@mipmap/bg_btn_blue3">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="保存"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="17dp"
+                        android:gravity="center_horizontal"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

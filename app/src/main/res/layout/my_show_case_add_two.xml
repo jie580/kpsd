@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#F2F3F7"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_bar"
+            app:viewModel="@{titleViewModel}" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="79.5dp">
+
+                <RelativeLayout
+                    android:id="@+id/content"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:minHeight="100dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_white_30_corner"
+                    >
+                    <ImageView
+                        android:id="@+id/add"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/btn_add2" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginLeft="17dp"/>
+
+                </RelativeLayout>
+
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="370dp"-->
+<!--                    android:layout_height="67dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="5dp">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="364dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginLeft="3dp"-->
+<!--                        android:background="@mipmap/line_input_bg" />-->
+
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="28dp"-->
+<!--                        android:layout_marginBottom="28dp"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginRight="27dp"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        >-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/price"-->
+<!--                            android:layout_width="92dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="center"-->
+<!--                            android:hint="请输入"-->
+<!--                            android:textColorHint="#80B5FF"-->
+<!--                            android:textColor="#80B5FF"-->
+<!--                            android:background="@color/transparent"-->
+<!--                            android:inputType="number"-->
+<!--                            android:textSize="16sp"/>-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="11dp"-->
+<!--                            android:layout_height="28dp"-->
+<!--                            android:layout_marginLeft="23dp"-->
+<!--                            android:background="@mipmap/ic_bias"/>-->
+<!--                        <TextView-->
+<!--                            android:id="@+id/units"-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:hint="请选择"-->
+<!--                            android:textColorHint="#80B5FF"-->
+<!--                            android:layout_marginLeft="43dp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:background="@color/transparent"-->
+<!--                            android:textColor="#80B5FF"-->
+<!--                            android:textSize="16sp"/>-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/delete"-->
+<!--                            android:layout_width="25dp"-->
+<!--                            android:layout_height="26dp"-->
+<!--                            android:layout_marginLeft="26dp"-->
+<!--                            android:background="@mipmap/btn_delete"-->
+<!--                            android:visibility="gone"/>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_marginStart="27dp"-->
+<!--                            android:gravity="left|center_vertical"-->
+<!--                            android:text="价格"-->
+<!--                            android:textColor="@color/LL_000000"-->
+<!--                            android:textSize="16dp" />-->
+<!--                    </LinearLayout>-->
+
+<!--                </RelativeLayout>-->
+
+
+                <RelativeLayout
+                    android:id="@+id/depositWrap"
+                    android:layout_width="370dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@mipmap/line_input_bg" />
+
+
+                    <EditText
+                        android:id="@+id/deposit"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:focusable="true"
+                        android:gravity="right|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="28dp"
+                        android:textColor="@color/LL_000000"
+                        android:hint="请输入金额"
+                        android:inputType="numberDecimal"
+                        android:maxLength="16"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="35dp"
+                        android:textColor="@color/LL_000000"
+                        android:textSize="16dp"
+                        android:text="押金" />
+
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/selectCountWrap"
+                    android:layout_width="370dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@mipmap/line_input_bg" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="35dp"
+                        android:textColor="@color/LL_000000"
+                        android:textSize="16dp"
+                        android:text="库存" />
+
+
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="166dp"
+                        android:background="@mipmap/btn_solid_left" />
+                    <EditText
+                        android:id="@+id/countInput"
+                        android:layout_width="100dp"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="63dp"
+                        android:textColor="#FF80B5FF"
+                        android:hint="0"
+                        android:textColorHint="#FF80B5FF"
+                        android:background="@color/transparent"
+                        android:inputType="number"
+                        android:textSize="16dp"
+                        android:text="" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="44dp"
+                        android:background="@mipmap/btn_solid_right" />
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/sendTypeWrap"
+                    android:layout_width="370dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100in"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@mipmap/line_input_bg" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="35dp"
+                        android:textColor="@color/LL_000000"
+                        android:textSize="16dp"
+                        android:text="寄送方式" />
+                    <TextView
+                        android:id="@+id/sendTypeTip"
+                        android:layout_width="200dp"
+                        android:gravity="right|center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="108dp"
+                        android:textColor="@color/LL_000000"
+                        android:background="@color/transparent"
+                        android:focusable="false"
+                        android:textSize="16dp"
+                        android:text=""
+                        />
+
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="33dp"
+                        android:background="@mipmap/btn_solid_right" />
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/serviceTypeWrap"
+                        android:layout_width="370dp"
+                        android:layout_height="67dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100in"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:background="@mipmap/line_input_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="35dp"
+                            android:textColor="@color/LL_000000"
+                            android:textSize="16dp"
+                            android:text="服务方式" />
+                        <TextView
+                            android:id="@+id/serviceTypeTip"
+                            android:layout_width="200dp"
+                            android:gravity="right|center_vertical"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="108dp"
+                            android:textColor="@color/LL_000000"
+                            android:background="@color/transparent"
+                            android:focusable="false"
+                            android:textSize="16dp"
+                            />
+
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="33dp"
+                            android:background="@mipmap/btn_solid_right" />
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/emailWrap"
+                        android:layout_width="370dp"
+                        android:layout_height="67dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:background="@mipmap/line_input_bg" />
+
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:focusable="true"
+                            android:gravity="right|center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="28dp"
+                            android:textColor="@color/LL_000000"
+                            android:hint="请填写邮箱"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="16"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="35dp"
+                            android:textColor="@color/LL_000000"
+                            android:textSize="16dp"
+                            android:text="接收邮箱" />
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/addressWrap"
+                        android:layout_width="370dp"
+                        android:layout_height="67dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100in"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:background="@mipmap/line_input_bg" />
+
+                        <TextView
+                            android:id="@+id/addressTitle"
+                            android:layout_width="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="35dp"
+                            android:textColor="@color/LL_000000"
+                            android:textSize="16dp"
+                            android:text="商家地址" />
+                        <TextView
+                            android:id="@+id/address"
+                            android:layout_width="150dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="148dp"
+                            android:textColor="@color/LL_000000"
+                            android:background="@color/transparent"
+                            android:focusable="false"
+                            android:textSize="16dp" />
+
+
+                        <ImageView
+                            android:layout_width="31dp"
+                            android:layout_height="31dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="33dp"
+                            android:background="@mipmap/ic_biaoji" />
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/streetWrap"
+                        android:layout_width="370dp"
+                        android:layout_height="67dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100in"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="3dp"
+                            android:background="@mipmap/line_input_bg" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="35dp"
+                            android:textColor="@color/LL_000000"
+                            android:textSize="16dp"
+                            android:text="详细地址" />
+                        <EditText
+                            android:id="@+id/street"
+                            android:layout_width="220dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="108dp"
+                            android:textColor="@color/LL_000000"
+                            android:background="@color/transparent"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/relevancyWrap"
+                    android:layout_width="370dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@mipmap/line_input_bg" />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="35dp"
+                        android:textColor="@color/LL_000000"
+                        android:textSize="16dp"
+                        android:text="是否需要关联员工" />
+
+
+                    <ImageView
+                        android:id="@+id/is_relevancy"
+                        android:layout_width="106dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:background="@mipmap/btn_switch_n"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="25dp"
+                        android:text="" />
+
+                </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/userListWrap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="vertical">
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:id="@+id/userList"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clipChildren="false"
+                                    android:clipToPadding="false"
+                                    android:orientation="horizontal">
+
+                                </LinearLayout>
+
+
+                            </HorizontalScrollView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <!--                <RelativeLayout-->
+<!--            android:layout_width="370dp"-->
+<!--            android:layout_height="67dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="5dp">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginLeft="3dp"-->
+<!--                android:background="@mipmap/line_input_bg" />-->
+
+
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:gravity="left|center_vertical"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="35dp"-->
+<!--                android:textColor="@color/LL_000000"-->
+<!--                android:textSize="16dp"-->
+<!--                android:text="是否支持邮寄" />-->
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/is_mail"-->
+<!--                android:layout_width="106dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:background="@mipmap/btn_switch_y"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:text="" />-->
+
+<!--        </RelativeLayout>-->
+            </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="79.5dp"
+                android:layout_alignParentBottom="true">
+                <ImageView
+                    android:id="@+id/submit"
+                    android:layout_width="198.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/btn_submit"/>
+                <ImageView
+                    android:id="@+id/preview"
+                    android:layout_width="198.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/btn_preview"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</layout>

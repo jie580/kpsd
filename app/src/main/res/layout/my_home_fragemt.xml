@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F3F7"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/mswipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+            <!--第二部分：主要内容，NestedScrollView和ScrollView基本功能一致，只不过NestedScrollView可以兼容新的控件-->
+            <com.ming.sjll.ui.StickyScrollView
+        android:id="@+id/StickyScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+
+                android:scaleType="centerCrop"
+                android:src="@mipmap/top_head"
+                custom:right_bottom_radius="40dp"
+                custom:left_bottom_radius="40dp" />
+
+            <LinearLayout
+                android:id="@+id/contentWrap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/recyclerviewWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.ming.sjll.ui.LocateCenterHorizontalView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:overScrollMode="never">
+
+                    </com.ming.sjll.ui.LocateCenterHorizontalView>
+
+
+                    <com.ming.sjll.ui.ContentViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:minHeight="500dp"
+
+                        android:layout_height="0dp"  />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/recyclerviewWrap2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/scheduleFrameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            
+            <ImageView
+                android:id="@+id/btnInteraction"
+                android:layout_width="43dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/btn_interaction"/>
+
+            <RelativeLayout
+               android:id="@+id/fansWrap"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:visibility="gone">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="45dp"
+                    android:background="@mipmap/top_head2"/>
+                    <org.raphets.roundimageview.RoundImageView
+                        android:id="@+id/headImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="50dp"
+                        app:leftBottom_corner_radius="8dp"
+                        app:leftTop_corner_radius="8dp"
+                        app:rightBottom_corner_radius="8dp"
+                        app:rightTop_corner_radius="8dp"
+                        app:type="round" />
+    
+    
+                <ImageView
+                    android:id="@+id/homeSex"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="118dp"
+                    android:background="@mipmap/ic_my_sex_man"/>
+                    <TextView
+                        android:id="@+id/homeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="118dp"
+                        android:layout_marginRight="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/shape_left_right_corner"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:text="酷拍商店"/>
+    
+                    <TextView
+                        android:id="@+id/coverImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_left_right_corner"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:textColor="#040404"
+                        android:textSize="16sp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="13dp"
+                        android:text="更换背景"/>
+                    <ImageView
+                        android:id="@+id/is_approve"
+                        android:layout_width="63dp"
+                        android:layout_height="63dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@mipmap/ic_kpsd"/>
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+        
+            
+        
+
+    </com.ming.sjll.ui.StickyScrollView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+<!--        <ImageView-->
+<!--            android:layout_width="355dp"-->
+<!--            android:layout_height="49dp"-->
+<!--            android:src="@mipmap/btn_talk"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginBottom="20dp"/>-->
+
+    </RelativeLayout>
+    <com.ming.sjll.ui.DragFloatActionButton
+        android:id="@+id/addSample"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="400dp"
+        android:background="@mipmap/btn_add_centre" />
+
+
+</android.support.design.widget.CoordinatorLayout>

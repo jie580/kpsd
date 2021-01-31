@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:tag="sticky"
+            android:orientation="horizontal"
+            android:background="#F2F3F7">
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21"
+                android:textColor="#ff000000"
+                android:textSize="29sp" />
+
+            <TextView
+                android:id="@+id/tv_moth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:paddingBottom="20dp"
+                android:layout_marginTop="6dp"
+                android:text="6月"
+                android:clipChildren="true"
+                android:clipToPadding="true"
+                android:layout_marginLeft="8dp"
+                android:textColor="#ff000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_heart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Lucas Wakamatsu 新品拍摄"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="这是我的第二个作品"
+                    android:textColor="#C6C6C6"
+                    android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/btn_more"/>
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/voidWrap"
+                android:layout_width="260dp"
+                android:layout_height="198dp"
+                android:layout_gravity="left">
+
+                <com.heartfor.heartvideo.video.HeartVideo
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="178dp"
+                    />
+
+                <!--        <com.boredream.bdvideoplayer.BDVideoView-->
+                <!--            android:id="@+id/video_view"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="match_parent">-->
+
+                <!--        </com.boredream.bdvideoplayer.BDVideoView>-->
+                <!--        <com.ming.sjll.ui.CustomRoundAngleImageView-->
+                <!--            android:id="@+id/playBg"-->
+                <!--            android:layout_width="274dp"-->
+                <!--            android:layout_height="198dp"-->
+                <!--            android:layout_marginTop="10dp"-->
+                <!--            android:scaleType="centerCrop"-->
+                <!--            custom:radius="10dp" />-->
+                <!--        <ImageView-->
+                <!--            android:id="@+id/playBtn"-->
+                <!--            android:layout_width="52dp"-->
+                <!--            android:layout_height="52dp"-->
+                <!--            android:layout_centerInParent="true"-->
+                <!--            android:src="@mipmap/video_play"/>-->
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                app:verticalSpacing="13dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

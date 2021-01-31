@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.tencent.tencentmap.mapsdk.maps.MapView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/wrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="17dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="38dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_white_30_corner"
+                            android:paddingTop="30dp">
+
+                            <com.ming.sjll.ui.PagedListView
+                                android:id="@+id/listView"
+                                android:layout_width="match_parent"
+                                android:layout_height="276dp"
+                                android:layout_marginBottom="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="343dp"
+                        android:layout_height="68dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/line_input_bg">
+
+                        <EditText
+                            android:id="@+id/searchAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="65dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="搜索地点"
+                            android:inputType="text"
+                            android:maxLength="15"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/searchBtn"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_centerHorizontal="false"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:background="@mipmap/search_bg_icon3" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+</layout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F3F7"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/release_project_top_bg" />
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+
+            
+            <LinearLayout
+                android:layout_width="266dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="93dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:background="@mipmap/line_input_money">
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14，554"
+                    android:textSize="14sp"
+                    android:textColor="#0A3FFF"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.ming.sjll.ui.StickyScrollView
+                android:id="@+id/scrollViewWarp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical"
+                android:layout_marginTop="13dp"
+                android:fillViewport="true"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="订单号"
+                        android:textColor="#FFD7DAE5"
+                        android:textSize="14sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/order_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textColor="#FF0A3FFF"
+                            android:textSize="14sp"
+                            android:text="202009015130000101"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+                        <TextView
+                            android:id="@+id/order_no_copy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:background="@drawable/side_blue_3_50"
+                            android:textColor="#FF0A3FFF"
+                            android:textSize="14sp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"
+                            android:text="复制"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="对公账户"
+                        android:textColor="#FFD7DAE5"
+                        android:textSize="14sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textColor="#FF0A3FFF"
+                            android:textSize="14sp"
+                            android:text="202009015130000101"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+                            <TextView
+                                android:id="@+id/account_copy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:background="@drawable/side_blue_3_50"
+                                android:textColor="#FF0A3FFF"
+                                android:textSize="14sp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:paddingRight="20dp"
+                                android:paddingLeft="20dp"
+                                android:text="复制"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="账户名称"
+                        android:textColor="#FFD7DAE5"
+                        android:textSize="14sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/company_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textColor="#FF0A3FFF"
+                            android:textSize="14sp"
+                            android:text="202009015130000101"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+                            <TextView
+                                android:id="@+id/company_name_copy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:background="@drawable/side_blue_3_50"
+                                android:textColor="#FF0A3FFF"
+                                android:textSize="14sp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:paddingRight="20dp"
+                                android:paddingLeft="20dp"
+                                android:text="复制"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开户行"
+                        android:textColor="#FFD7DAE5"
+                        android:textSize="14sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/bank_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textColor="#FF0A3FFF"
+                            android:textSize="14sp"
+                            android:text="202009015130000101"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+                            <TextView
+                                android:id="@+id/bank_name_copy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:background="@drawable/side_blue_3_50"
+                                android:textColor="#FF0A3FFF"
+                                android:textSize="14sp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:paddingRight="20dp"
+                                android:paddingLeft="20dp"
+                                android:text="复制"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:src="@mipmap/text_company_pay"/>
+
+                </LinearLayout>
+            </com.ming.sjll.ui.StickyScrollView>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="345dp"
+                android:layout_height="47dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:text="已完成付款"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/sp_14"
+                android:background="@drawable/shape_blue_50_corner_2" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/changeType"
+        android:layout_width="355dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_white_30_corner"/>
+
+
+        <TextView
+            android:id="@+id/changeTypeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:gravity="left|center_vertical"
+            android:text="将此账号变为个人账号"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16dp"
+            android:text="" />
+
+        <ImageView
+             android:layout_width="20dp"
+                android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:background="@mipmap/btn_tip" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/deal"
+        android:layout_width="355dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_white_30_corner"/>
+
+
+        <TextView
+            android:id="@+id/dealTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:gravity="left|center_vertical"
+            android:text="申请交易权限"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16dp"
+            android:text="" />
+
+        <ImageView
+             android:layout_width="20dp"
+                android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:background="@mipmap/btn_tip" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/author"
+        android:layout_width="355dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_white_30_corner"/>
+
+
+        <TextView
+            android:id="@+id/authorTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:gravity="left|center_vertical"
+            android:text="申请资质认证"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16dp"
+            android:text="" />
+
+        <ImageView
+             android:layout_width="20dp"
+                android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:background="@mipmap/btn_tip" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/advertising"
+        android:layout_width="355dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_white_30_corner"/>
+
+
+        <TextView
+            android:id="@+id/advertisingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:gravity="left|center_vertical"
+            android:text="我要投广"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16dp"
+            android:text="" />
+
+        <ImageView
+             android:layout_width="20dp"
+                android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:background="@mipmap/btn_tip" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/setting"
+        android:layout_width="355dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_white_30_corner"/>
+
+
+        <TextView
+            android:id="@+id/settingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:gravity="left|center_vertical"
+            android:text="设置"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16dp"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:background="@mipmap/btn_solid_right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/service"
+        android:layout_width="355dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_white_30_corner"/>
+
+
+        <TextView
+            android:id="@+id/serviceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:gravity="left|center_vertical"
+            android:text="客服中心"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16dp"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:background="@mipmap/btn_solid_right" />
+
+    </RelativeLayout>
+
+</LinearLayout>

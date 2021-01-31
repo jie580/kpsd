@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="105dp"
+            android:background="@mipmap/ic_project_flow_money_guide1">
+            <TextView
+                android:id="@+id/money1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="55dp"
+                android:text="42000"/>
+            <TextView
+                android:id="@+id/money2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="55dp"
+                android:text="42000"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/add_occupation"
+            android:layout_width="101dp"
+            android:layout_height="105dp"
+            android:background="@mipmap/ic_project_flow_money_guide2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="293dp"
+        android:layout_height="105dp"
+        android:background="@mipmap/ic_project_flow_money_guide3">
+
+        <TextView
+            android:id="@+id/money3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:layout_marginLeft="19dp"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="55dp"
+            android:text="42000"/>
+        
+        <TextView
+            android:id="@+id/sendProjectMoney"
+            android:layout_width="83dp"
+            android:layout_height="29dp"
+            android:gravity="center"
+            android:text="发送账单"
+            android:layout_marginTop="54dp"
+            android:layout_marginRight="19dp"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:background="@drawable/shape_white_transparency_30_corner"
+            />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

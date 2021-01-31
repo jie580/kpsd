@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/showImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/showWorks"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:paddingStart="9dp"
+
+            android:paddingTop="6dp"
+            android:paddingBottom="26dp"
+            android:background="@drawable/radius_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <org.raphets.roundimageview.RoundImageView
+                    android:id="@+id/headImage"
+                    android:layout_width="61dp"
+                    android:layout_height="61dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:leftBottom_corner_radius="22dp"
+                    app:leftTop_corner_radius="22dp"
+                    app:rightBottom_corner_radius="22dp"
+                    app:rightTop_corner_radius="22dp"
+                    app:type="round" />
+                <LinearLayout
+                    android:id="@+id/linearClose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:paddingEnd="49dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/nameClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="NYE."
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/titleClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                          android:textColor="#000"
+                        android:text="测试专用"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/describeClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                          android:textColor="#000"
+                        android:text="欣赏于米兰时装周期间在Gucci Hub举行
+的精彩时装秀，揭秘由创作总监亚力山卓·
+米开理打造的女士系列。"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearOpen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:paddingEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameOpen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="NYE."
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/titleOpen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="测试专用"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/describeOpen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23dp"
+                        android:textColor="#000"
+                        android:text="欣赏于米兰时装周期间在Gucci Hub举行
+的精彩时装秀，揭秘由创作总监亚力山卓·
+米开理打造的女士系列。"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

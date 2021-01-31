@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <EditText
+            android:id="@+id/demand"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:focusable="true"
+            android:gravity="right|center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="28dp"
+            android:textColor="@color/LL_000000"
+            android:hint="请输入项目需求"
+            android:inputType="text"
+            android:maxLength="16"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:text="需求" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:text="品牌" />
+
+        <EditText
+            android:id="@+id/brand"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:focusable="true"
+            android:gravity="right|center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="28dp"
+            android:textColor="@color/LL_000000"
+            android:hint="请输入品牌名"
+            android:inputType="text"
+            android:maxLength="16"
+            android:textSize="16sp" />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+
+            android:textSize="16dp"
+            android:text="预算" />
+
+        <EditText
+            android:id="@+id/budget"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:focusable="true"
+            android:gravity="right|center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="28dp"
+            android:textColor="@color/LL_000000"
+
+            android:hint="请输入项目预算"
+            android:inputType="number"
+            android:maxLength="16"
+            android:textSize="16sp" />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+
+            android:textSize="16dp"
+            android:text="地址" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:focusable="false"
+            android:gravity="right|center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="28dp"
+            android:textColor="@color/LL_000000"
+            android:hint="请选择地址"
+            android:inputType="number"
+            android:maxLength="16"
+            android:textSize="16sp" />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/backgroundImage"
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+
+            android:textSize="16dp"
+            android:text="选择项目展示封面" />
+
+
+        <TextView
+            android:id="@+id/backgroundImageTip"
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:background="@mipmap/btn_solid_right" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

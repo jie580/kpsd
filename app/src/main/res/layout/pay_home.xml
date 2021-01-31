@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F3F7"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/release_project_top_bg" />
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.ming.sjll.ui.StickyScrollView
+                android:id="@+id/scrollViewWarp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical"
+                android:layout_marginTop="13dp"
+                android:fillViewport="true"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="80dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="430dp"
+                        android:background="@drawable/shape_white_30_corner"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="27dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginRight="32dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="订单号"
+                                        android:textColor="#FFD7DAE5"
+                                        android:textSize="14sp"/>
+                                    <TextView
+                                        android:id="@+id/order_no"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="right"
+                                        android:textColor="#FF0A3FFF"
+                                        android:textSize="14sp"
+                                        android:text="202009015130000101"/>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.5dp"
+                                    android:layout_marginTop="9dp"
+                                    android:background="#FF80B5FF" />
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="29dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="订单信息"
+                                        android:textColor="#FFD7DAE5"
+                                        android:textSize="14sp"/>
+                                    <TextView
+                                        android:id="@+id/order_info"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="right"
+                                        android:textColor="#FF0A3FFF"
+                                        android:textSize="14sp"
+                                        android:text="202009015130000101"/>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.5dp"
+                                    android:layout_marginTop="9dp"
+                                    android:background="#FF80B5FF" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="29dp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="付款金额"
+                                        android:textColor="#FFD7DAE5"
+                                        android:textSize="14sp"/>
+                                    <TextView
+                                        android:id="@+id/money"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="right"
+                                        android:textColor="#FF0A3FFF"
+                                        android:textSize="14sp"
+                                        android:text="202009015130000101"/>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1.5dp"
+                                    android:layout_marginTop="9dp"
+                                    android:background="#FF80B5FF" />
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="29dp"
+                                android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="支付方式"
+                                        android:textColor="#FFD7DAE5"
+                                        android:textSize="14sp"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <CheckBox
+                                            android:id="@+id/guide1"
+                                            android:layout_width="27dp"
+                                            android:layout_height="27dp"
+                                            android:clickable="false"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginEnd="15dp"
+                                            android:button="@drawable/btn_checke"
+                                            android:checked="true" />
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:background="@mipmap/ic_pay1"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="支付宝支付"
+                                            android:textColor="#000"
+                                            android:layout_marginLeft="20dp"
+                                            android:textSize="14sp"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <CheckBox
+                                            android:id="@+id/guide2"
+                                            android:layout_width="27dp"
+                                            android:layout_height="27dp"
+                                            android:clickable="false"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginEnd="15dp"
+                                            android:button="@drawable/btn_checke"
+                                            android:checked="false" />
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:background="@mipmap/ic_pay2"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="微信支付"
+                                            android:textColor="#000"
+                                            android:layout_marginLeft="20dp"
+                                            android:textSize="14sp"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <CheckBox
+                                            android:id="@+id/guide3"
+                                            android:layout_width="27dp"
+                                            android:layout_height="27dp"
+                                            android:clickable="false"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginEnd="15dp"
+                                            android:button="@drawable/btn_checke"
+                                            android:checked="false" />
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:background="@mipmap/ic_pay3"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="公司账户"
+                                            android:textColor="#000"
+                                            android:layout_marginLeft="20dp"
+                                            android:textSize="14sp"/>
+                                    </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.ming.sjll.ui.StickyScrollView>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="345dp"
+                android:layout_height="47dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:text="立即付款"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/sp_14"
+                android:background="@drawable/shape_blue_50_corner_2" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</layout>

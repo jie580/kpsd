@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/wrap"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="58.71dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:text="红星美凯龙（布吉店）"
+                android:textColor="#FF000000"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="50dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:textColor="#FFD7DAE5"
+                android:text="100m内  | 龙岗区龙博路"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/isSelect"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_biaoji"/>
+    </RelativeLayout>
+
+</LinearLayout>

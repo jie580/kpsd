@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_marginBottom="6dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            android:background="#FFFFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:id="@+id/wrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/occ1"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/home_occ_1" />
+                    <ImageView
+                        android:id="@+id/occ2"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/home_occ_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/occ3"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/home_occ_3" />
+
+                    <ImageView
+                        android:id="@+id/occ4"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/home_occ_4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/occ5"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/home_occ_5" />
+
+                    <ImageView
+                        android:id="@+id/occ6"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/home_occ_6" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/occ10"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/home_occ_10" />
+
+                    <ImageView
+                        android:id="@+id/occ11"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/home_occ_11" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

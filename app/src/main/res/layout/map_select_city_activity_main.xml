@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+ >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainGray"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:background="@mipmap/bg_select_city">
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+            <FrameLayout
+            android:id="@+id/tool_bar_fl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentBottom="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="315dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/search_bg">
+
+                <EditText
+                    android:id="@+id/search_locate_content_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="65dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:maxLength="11"
+                    android:text=""
+                    android:textStyle="normal"
+                    android:textColor="#ffffff"
+                    android:hint="输入城市名或拼音查询"
+                    android:textCursorDrawable="@drawable/cursor_search"
+                    android:textSelectHandle="@drawable/cursor_search_center"
+                    android:textSelectHandleLeft="@drawable/cursor_search_left"
+                    android:textSelectHandleRight="@drawable/cursor_search_right"
+                    android:textSize="18sp"
+                  />
+
+                <ImageView
+                    android:id="@+id/searchBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="false"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@mipmap/search_bg_icon" />
+
+            </RelativeLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/search_locate_content_et"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/map_select_city_home_head_et_style"-->
+<!--                    android:drawableRight="@drawable/map_select_city_ic_light_main_search"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:hint="输入城市名或拼音查询"-->
+<!--                    android:imeOptions="actionSearch"-->
+<!--                    android:maxLength="16"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textColorHint="@color/main_a8"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--            </LinearLayout>-->
+        </FrameLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/total_city_lv"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.ming.sjll.map.selectcity.view.LetterListView
+            android:id="@+id/total_city_letters_lv"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"/>
+
+        <ListView
+            android:id="@+id/search_city_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone" />
+
+
+            <TextView
+            android:id="@+id/no_search_result_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="抱歉,暂时没有找到相关城市"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <data>
+
+    <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+</layout>

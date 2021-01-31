@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/squareHead"
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                android:scaleType="centerCrop"
+                custom:radius="20dp"
+                android:src="@mipmap/temp_head"/>
+            <ImageView
+                android:id="@+id/squareHeadBtn"
+                android:layout_width="82dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/text1"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp">
+
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/rectangleHead"
+                android:layout_width="228dp"
+                android:layout_height="109dp"
+                android:scaleType="centerCrop"
+                custom:radius="20dp"
+                android:src="@mipmap/temp_head"/>
+
+            <ImageView
+                android:id="@+id/rectangleHeadBtn"
+                android:layout_width="93dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/text2"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/name"
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:text="姓名" />
+
+
+        <TextView
+            android:id="@+id/nameTip"
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16dp"
+            android:text="" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/sex"
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:text="性别" />
+
+
+        <TextView
+            android:id="@+id/sexTip"
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/sexTipImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="55dp" />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/occupation"
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100in"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:text="职业信息" />
+
+
+        <TextView
+            android:id="@+id/occupationTip"
+            android:layout_width="200dp"
+            android:gravity="right|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16dp"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:background="@mipmap/btn_solid_right" />
+
+    </RelativeLayout>
+
+
+
+<!--职位-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:id="@+id/company"
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:text="在职公司" />
+
+
+        <TextView
+            android:id="@+id/companyTip"
+            android:layout_width="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="55dp" />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/personalized"
+        android:layout_width="370dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100in"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/line_input_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/LL_000000"
+            android:textSize="16dp"
+            android:text="个人介绍" />
+
+
+        <TextView
+            android:id="@+id/personalizedTip"
+            android:layout_width="200dp"
+            android:gravity="right|center_vertical"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="53dp"
+            android:textColor="@color/LL_000000"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16dp"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:background="@mipmap/btn_solid_right" />
+
+    </RelativeLayout>
+
+</LinearLayout>

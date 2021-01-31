@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_right_top_bottom_30_gray"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:id="@+id/frameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="69dp"
+                android:layout_height="69dp"
+                android:background="@mipmap/btn_send3"/>
+            <LinearLayout
+                android:id="@+id/guide1"
+                android:layout_width="70dp"
+                android:layout_height="80.01dp"
+                android:background="@mipmap/ic_project_flow_guide">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/ic_project_flow_guide1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/guide2"
+                android:layout_width="70dp"
+                android:layout_height="80.01dp"
+               >
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/ic_project_flow_guide2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/guide3"
+                android:layout_width="70dp"
+                android:layout_height="80.01dp"
+                >
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/ic_project_flow_guide3"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/guide4"
+                android:layout_width="70dp"
+                android:layout_height="80.01dp"
+                >
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/ic_project_flow_guide4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/guide5"
+                android:layout_width="70dp"
+                android:layout_height="80.01dp"
+                >
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/ic_project_flow_guide5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/guide6"
+                android:layout_width="70dp"
+                android:layout_height="80.01dp"
+                >
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/ic_project_flow_guide6"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/guide7"
+                android:layout_width="70dp"
+                android:layout_height="80.01dp"
+                >
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/ic_project_flow_guide7"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+
+</layout>

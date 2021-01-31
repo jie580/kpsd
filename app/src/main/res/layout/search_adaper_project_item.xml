@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_top_corner">
+
+
+
+        <RelativeLayout
+            android:id="@+id/projectWrap"
+            android:layout_width="357dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:visibility="visible">
+
+
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/projectBg"
+                android:layout_width="357dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                custom:radius="15dp"
+                android:src="@mipmap/ic_launcher"
+                />
+
+
+            <View
+                android:id="@+id/selectWrap"
+                android:layout_width="357dp"
+                android:layout_height="200dp"
+                android:background="@drawable/side_blue_3"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="14dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/projectDemand"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/shape_left_right_corner"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:text="Hello World!"
+                        android:textColor="@color/LL_000000"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/projectBrand"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_left_right_corner"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="4dp"
+                    android:text="发的发"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/LL_000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/projectButtonDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="6dp"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/projectDateWarp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:background="@drawable/shape_left_right_corner"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@mipmap/time_start" />
+
+                        <TextView
+                            android:id="@+id/projectDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="4dp"
+                            android:text="4月6日 7:30-22:00"
+                            android:textSize="14dp"
+                            android:textColor="@color/LL_000000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/btn_chat" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/noticeWrap"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone">
+
+            <ImageView
+
+                android:layout_width="297dp"
+                android:layout_height="212dp"
+                android:background="@mipmap/project_notice_bg" />
+
+            <ImageView
+                android:id="@+id/noticeBg"
+                android:layout_width="90dp"
+                android:layout_height="212dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/project_notice_mt_bg" />
+
+            <LinearLayout
+                android:layout_width="267dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="26dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lookTimes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/time_start" />
+
+                    <TextView
+                        android:id="@+id/noticeDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="8dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/LL_000000"
+                        android:text="7:30-22:00"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/btn_solid_buttom" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <com.ming.sjll.ui.AntoLineUtil
+                        android:id="@+id/noticeTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:verticalSpacing="13dp"></com.ming.sjll.ui.AntoLineUtil>
+
+                    <TextView
+                        android:id="@+id/rc_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="52dp"
+                        android:background="@drawable/shape_left_right_w_corner"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="8dp"
+                        android:text="Hello World!"
+                        android:textColor="@color/LL_000000"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:background="@drawable/shape_left_right_w_corner"-->
+                    <!--android:paddingLeft="15dp"-->
+                    <!--android:paddingTop="8dp"-->
+                    <!--android:paddingRight="15dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:text="Hello World!"-->
+                    <!--android:textSize="14dp" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:background="@drawable/shape_left_right_w_corner"-->
+                    <!--android:paddingLeft="15dp"-->
+                    <!--android:paddingTop="8dp"-->
+                    <!--android:paddingRight="15dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:text="Hello World!"-->
+                    <!--android:textSize="14dp" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:background="@drawable/shape_left_right_w_corner"-->
+                    <!--android:paddingLeft="15dp"-->
+                    <!--android:paddingTop="8dp"-->
+                    <!--android:paddingRight="15dp"-->
+                    <!--android:paddingBottom="8dp"-->
+                    <!--android:text="Hello World!"-->
+                    <!--android:textSize="14dp" />-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

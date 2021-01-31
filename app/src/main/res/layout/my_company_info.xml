@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+   >
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+                <ImageView
+                    android:id="@+id/backdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/top_head"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="130dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:translationY="70dp"
+                            android:background="@drawable/shape_top_left_right_chat"
+                            android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:orientation="horizontal">
+
+
+                                    <RelativeLayout
+                                        android:layout_width="109dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp">
+
+                                        <com.ming.sjll.ui.CustomRoundAngleImageView
+                                            android:id="@+id/squareHead"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="109dp"
+                                            android:scaleType="centerCrop"
+                                            custom:radius="25dp"
+                                            android:src="@mipmap/ic_launcher"/>
+                                        <ImageView
+                                            android:id="@+id/squareHeadBtn"
+                                            android:layout_width="82dp"
+                                            android:layout_height="30dp"
+                                            android:background="@mipmap/text1"
+                                            android:layout_alignParentRight="true"/>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="228dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="18dp">
+
+                                        <com.ming.sjll.ui.CustomRoundAngleImageView
+                                            android:id="@+id/rectangleHead"
+                                            android:layout_width="228dp"
+                                            android:layout_height="109dp"
+                                            android:scaleType="centerCrop"
+                                            custom:radius="25dp"
+                                            android:src="@mipmap/ic_launcher"/>
+
+                                        <ImageView
+                                            android:id="@+id/rectangleHeadBtn"
+                                            android:layout_width="93dp"
+                                            android:layout_height="30dp"
+                                            android:src="@mipmap/text2"
+                                            android:layout_alignParentRight="true"/>
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="27dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="公司信息"
+                                        android:textStyle="bold"
+                                        android:textColor="#000"
+                                        android:layout_marginBottom="17dp"
+                                        android:textSize="12sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingBottom="15dp"
+                                        android:paddingTop="15dp">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="12sp"
+                                            android:textColor="#9BA6BC"
+                                            android:text="公司名称"/>
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="right">
+                                            <EditText
+                                                android:id="@+id/full_company_name"
+                                                android:layout_width="match_parent"
+                                                android:gravity="right|center_vertical"
+                                                android:layout_height="match_parent"
+                                                android:textColor="#000"
+                                                android:hint="请输入"
+                                                android:background="@null"
+                                                android:imeOptions="flagNoExtractUi"
+                                                android:inputType="text"
+                                                android:textSize="12dp"
+                                                android:text="" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@drawable/dotted_line_gray_05"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingBottom="15dp"
+                                        android:paddingTop="15dp">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="12sp"
+                                            android:textColor="#9BA6BC"
+                                            android:text="公司简称"/>
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="right">
+                                            <EditText
+                                                android:id="@+id/short_company_name"
+                                                android:layout_width="match_parent"
+                                                android:gravity="right|center_vertical"
+                                                android:layout_height="match_parent"
+                                                android:textColor="#000"
+                                                android:hint="请输入"
+                                                android:background="@null"
+                                                android:imeOptions="flagNoExtractUi"
+                                                android:inputType="text"
+                                                android:textSize="12dp"
+                                                android:text="" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@drawable/dotted_line_gray_05"/>
+
+                                    <LinearLayout
+                                        android:id="@+id/address"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingBottom="15dp"
+
+                                        android:paddingTop="15dp">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="12sp"
+                                            android:textColor="#9BA6BC"
+                                            android:text="所在区域"/>
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="right">
+                                            <ImageView
+                                                android:layout_width="13.45dp"
+                                                android:layout_height="17dp"
+                                                android:src="@mipmap/ic_biaoji3"
+                                                android:layout_marginRight="6dp"/>
+                                            <TextView
+                                                android:id="@+id/addressTip"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textSize="12sp"
+                                                android:textColor="#000000"
+                                                android:textStyle="bold"
+                                                android:text="定位"/>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@drawable/dotted_line_gray_05"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingBottom="15dp"
+                                        android:paddingTop="15dp">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="12sp"
+                                            android:textColor="#9BA6BC"
+                                            android:text="详细地址"/>
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="right">
+                                            <EditText
+                                                android:id="@+id/street"
+                                                android:layout_width="match_parent"
+                                                android:gravity="right|center_vertical"
+                                                android:layout_height="match_parent"
+                                                android:textColor="#000"
+                                                android:hint="请输入"
+                                                android:background="@null"
+                                                android:imeOptions="flagNoExtractUi"
+                                                android:inputType="text"
+                                                android:textSize="12dp"
+                                                android:text="" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@drawable/dotted_line_gray_05"/>
+
+
+                                </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="#ffffff"
+                            android:layout_marginTop="80dp"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="13dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/LL_000000"
+                                    android:textSize="12sp"
+                                    android:text="公司简介" />
+
+                                <EditText
+                                    android:id="@+id/describe"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@null"
+                                    android:hint="请输入"
+                                    android:minLines="3"
+                                    android:textColor="#000"
+                                    android:text=""
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="#ffffff"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/uploadLicense"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="13dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:id="@+id/licenseImg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@mipmap/ic_upload_license"/>
+
+                                <ImageView
+                                    android:id="@+id/noneDataLicense"
+                                    android:layout_width="72dp"
+                                    android:layout_height="62dp"
+                                    android:src="@mipmap/ic_upload_license"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        <!--            <com.rey.material.widget.Button-->
+<!--                android:id="@+id/submit"-->
+<!--                android:layout_width="335dp"-->
+<!--                android:layout_height="59dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:text="确定"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:background="@drawable/shape_blue_10_corner2"/>-->
+        <LinearLayout
+            android:layout_width="333dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="34dp"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/bg_btn_blue">
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="333dp"
+                android:layout_height="53dp"
+                android:text="确定"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_bar"
+            app:viewModel="@{titleViewModel}" />
+    </RelativeLayout>
+
+</layout>

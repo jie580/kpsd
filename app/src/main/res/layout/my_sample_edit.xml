@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+   >
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F3F7"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_bar"
+            app:viewModel="@{titleViewModel}" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="364dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:background="@mipmap/line_input_bg" />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@null"
+                android:focusable="true"
+                android:gravity="left|center_vertical"
+                android:hint="请输入作品名称"
+                android:inputType="text"
+                android:text=""
+                android:textSize="16sp" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="107dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="364dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:background="@mipmap/line_input_bg_big12" />
+
+            <EditText
+                android:id="@+id/describe"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:hint="请输入作品介绍"
+                android:minLines="3"
+                android:text=""
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/wrapPicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:id="@+id/backgroundImage"
+                android:layout_width="370dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:background="@mipmap/line_input_bg" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="33dp"
+                    android:background="@mipmap/btn_solid_right" />
+
+
+                <TextView
+                    android:id="@+id/backgroundImageTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="53dp"
+                    android:gravity="left|center_vertical"
+                    android:text=""
+                    android:textColor="@color/LL_000000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="35dp"
+                    android:gravity="left|center_vertical"
+                    android:text="选择展示封面"
+
+                    android:textColor="@color/LL_000000"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="18dp"
+                android:src="@mipmap/tip_sample"
+                android:textSize="12sp" />
+
+            <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="339dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wrapVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="370dp"
+                android:layout_height="271dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                >
+                <com.ming.sjll.ui.CustomRoundAngleImageView
+                    android:id="@+id/videoImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:scaleType="centerCrop"
+                    custom:radius="30dp" />
+                <ImageView
+                    android:id="@+id/replaceVideo"
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/btn_replace"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+   <LinearLayout
+       android:layout_width="355dp"
+       android:layout_height="80dp"
+       android:layout_marginBottom="20dp"
+       android:clipChildren="false"
+       android:clipToPadding="false"
+       android:layout_gravity="center_horizontal"
+       android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/wrap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_white_15_corner">
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/btn_delete"
+            android:visibility="gone"/>
+<!--        <ImageView-->
+<!--            android:layout_width="93dp"-->
+<!--            android:layout_height="93dp"-->
+<!--            android:layout_marginTop="14dp"-->
+<!--            android:layout_marginLeft="14dp"-->
+<!--            android:background="@mipmap/bg_my_user_item_user_head"/>-->
+        <org.raphets.roundimageview.RoundImageView
+            android:id="@+id/headImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            app:leftBottom_corner_radius="16dp"
+            app:leftTop_corner_radius="16dp"
+            app:rightBottom_corner_radius="16dp"
+            app:rightTop_corner_radius="16dp"
+            app:type="round" />
+
+
+        <LinearLayout
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginLeft="95dp"
+            >
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="CNNY"
+                android:textSize="12sp"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="23dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+<!--            <TextView-->
+<!--                android:id="@+id/personalized"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="#000000"-->
+<!--                android:text="这里就是一个简单的介绍，还有排期需要去更改。"-->
+<!--                android:ellipsize="end"-->
+<!--                android:maxLines="2"-->
+<!--                android:textSize="14sp"/>-->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+   </LinearLayout>
+
+
+</LinearLayout>

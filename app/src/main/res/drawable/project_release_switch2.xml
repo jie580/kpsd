@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/release_project_type_select2"  android:state_activated="true" />
+    <item android:drawable="@mipmap/release_project_type2" />
+
+</selector>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rc_layout"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/voice_warp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:clipChildren="false"
+
+       >
+<!--        <ImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:background="@drawable/rc_ic_voice_sent"-->
+<!--            />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:background="@drawable/rc_ic_voice_sent"-->
+<!--            />-->
+
+        <TextView
+            android:id="@id/rc_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="42dp"
+            android:textStyle="bold"
+            android:textColor="@color/rc_voice_color_right"
+            android:layout_centerVertical="true"
+            android:text="50"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@id/rc_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="42dp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="@color/rc_voice_color_right"
+            android:text="20"
+            android:textSize="20sp" />
+
+        <ImageView
+                android:id="@id/rc_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+                android:scaleType="fitStart" />
+
+        <FrameLayout
+            android:id="@+id/fl_send_fire"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_gravity="start|top"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="-6dp"
+            android:background="@drawable/rc_fire_bg"
+            android:paddingLeft="4.5dp"
+            android:paddingRight="4.5dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_send_fire"
+                android:layout_width="6dp"
+                android:layout_height="9dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fire" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_receiver_fire"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="-6dp"
+            android:layout_marginRight="-6dp"
+            android:background="@drawable/rc_fire_bg"
+            android:paddingLeft="4.5dp"
+            android:paddingRight="4.5dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_receiver_fire"
+                android:layout_width="6dp"
+                android:layout_height="9dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fire" />
+
+            <TextView
+                android:id="@+id/tv_receiver_fire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:textColor="#333333"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/rc_voice_unread"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/rc_voice_unread" />
+
+</LinearLayout>

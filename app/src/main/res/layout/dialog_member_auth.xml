@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="6dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="23dp"
+        android:background="@drawable/shape_top_left_right_15">
+
+        <LinearLayout
+            android:id="@+id/initHide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="#000"
+                    android:text="设置员工权限"/>
+
+                <ImageView
+                    android:id="@+id/question"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right"
+                    android:src="@mipmap/icon_question"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#9BA6BC"
+                    android:text="设为客服"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/is_serve"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:background="@mipmap/btn_switch_y"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#9BA6BC"
+                    android:text="对外可见"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/is_visible"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:background="@mipmap/btn_switch_y"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#9BA6BC"
+                    android:text="作品同步至公司作品"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/is_synced"
+                         android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:background="@mipmap/btn_switch_y"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#9BA6BC"
+                    android:text="可管理橱窗"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/is_manage"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:background="@mipmap/btn_switch_y"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#9BA6BC"
+                android:text="可管理员工排期"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/is_schedule"
+                     android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:background="@mipmap/btn_switch_y"
+                    android:text="" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="333dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="34dp"
+            android:gravity="center_horizontal"
+            android:background="@mipmap/bg_btn_red">
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="333dp"
+            android:layout_height="53dp"
+            android:text="删除该人员"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+           />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

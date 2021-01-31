@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+android:layout_marginBottom="6dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginTop="35dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="36dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/dialog_auth_text"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <ImageView
+            android:layout_width="151dp"
+            android:layout_height="151dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="0dp"
+            android:background="@mipmap/avatars_login" />
+
+
+        <LinearLayout
+            android:id="@+id/isPromptWrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="65dp">
+            <ImageView
+                android:id="@+id/isPrompt"
+                android:layout_width="16.53dp"
+                android:layout_height="16.53dp"
+                android:layout_marginRight="12dp"
+                android:checked="false"
+                android:src="@mipmap/btn_close" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

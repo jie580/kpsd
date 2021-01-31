@@ -1,0 +1,13 @@
+*.iml
+.gradle
+.DS_Store
+/build
+/captures
+.idea/
+/.idea/*
+pay/build/
+local.properties
+eaYDcom/build/
+package.json
+node_modules/
+CHANGELOG.md

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/wrap"
+            android:layout_width="355dp"
+            android:layout_height="95dp"
+            android:orientation="horizontal"
+            android:background="@mipmap/line_input_bg_big12">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:orientation="vertical"
+
+                >
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#040404"
+                    android:text="深圳盛骞网络科技有限公司"
+                    android:layout_marginBottom="12dp"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/duty_paragraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#040404"
+                    android:text="914403005907454156"
+                    android:layout_marginBottom="12dp"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/btn_solid_right"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

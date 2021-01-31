@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:id="@+id/itemWrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/is_read"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="26dp"
+            android:clickable="false"
+            android:background="@mipmap/btn_checked_un"
+            android:checked="false" />
+
+
+        <LinearLayout
+            android:layout_width="293dp"
+            android:layout_height="60dp"
+            android:background="@drawable/shape_line_transparency_15_corner"
+            android:orientation="horizontal">
+
+            <com.ming.sjll.ui.CircleImageView
+                android:id="@+id/imageItem"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"/>
+
+                <LinearLayout
+                    android:layout_width="99dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/target_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:text="小山蕉服装搭配工作室"/>
+                </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginLeft="15dp"
+                android:text="1000.00"/>
+
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
+                    android:text="未开票"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

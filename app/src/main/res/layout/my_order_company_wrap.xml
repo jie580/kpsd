@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:background="#FFF2F3F7"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="107dp">
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/top_head"
+                custom:right_bottom_radius="40dp"
+                custom:left_bottom_radius="40dp" />
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+                <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/guide1"
+                        android:layout_width="114dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/shape_blue_10_corner"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:textSize="17sp"
+                        android:text="项目"/>
+                    <TextView
+                        android:id="@+id/guide1Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_red_30_corner"
+                        android:textSize="12sp"
+                        android:textColor="#fff"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginTop="-10dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_alignParentRight="true"
+                        android:text="1"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/guide2"
+                    android:layout_width="114dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/shape_white_10_corner"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    android:text="租赁"/>
+                <TextView
+                    android:id="@+id/guide2Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_red_30_corner"
+                    android:textSize="12sp"
+                    android:textColor="#fff"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_alignParentRight="true"
+                    android:text="1"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/guide3"
+                    android:layout_width="114dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/shape_white_10_corner"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    android:text="服务"/>
+                <TextView
+                    android:id="@+id/guide3Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_red_30_corner"
+                    android:textSize="12sp"
+                    android:textColor="#fff"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_alignParentRight="true"
+                    android:text="1"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+
+</layout>

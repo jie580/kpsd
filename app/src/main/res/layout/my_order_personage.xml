@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF2F3F7"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="107dp">
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/top_head"
+                custom:right_bottom_radius="40dp"
+                custom:left_bottom_radius="40dp" />
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingBottom="69dp"
+            />
+
+    </LinearLayout>
+
+</layout>

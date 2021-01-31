@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+   >
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF2F3F7"
+        android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="107dp">
+                <com.ming.sjll.ui.CustomRoundAngleImageView
+                    android:id="@+id/backdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/top_head"
+                    custom:right_bottom_radius="40dp"
+                    custom:left_bottom_radius="40dp" />
+
+                <include
+                    android:id="@+id/titleBar"
+                    layout="@layout/title_bar"
+                    app:viewModel="@{titleViewModel}" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/searchWrap"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                 android:layout_marginTop="15dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/search_bg" />
+                <ImageView
+                    android:id="@+id/searchBtn"
+                    android:layout_width="29.59dp"
+                    android:layout_height="27.72dp"
+                    android:background="@mipmap/search_bg_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    />
+
+            </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingBottom="69dp"
+                    />
+            
+                <com.rey.material.widget.Button
+                    android:id="@+id/submitBtnNone"
+                    android:layout_width="335dp"
+                    android:layout_height="59dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="移除该人员"
+                    android:gravity="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="16sp"
+                    android:clickable="false"
+                    android:stateListAnimator="@null"
+                    android:background="@drawable/shape_gray_10_corner"
+                    />
+
+            <com.rey.material.widget.Button
+                android:id="@+id/submitBtn"
+                android:layout_width="335dp"
+                android:layout_height="59dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:text="移除该人员"
+                android:gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:stateListAnimator="@null"
+                android:background="@drawable/shape_red_10_corner"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

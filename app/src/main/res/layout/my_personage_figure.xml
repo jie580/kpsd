@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF2F3F7"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                 <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:background="@mipmap/bg_top" />
+
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+
+        </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="107dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@mipmap/bg_figure1">
+
+                            <EditText
+                                android:id="@+id/height"
+                                android:layout_width="94dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="6dp"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:text="11"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="107dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/bg_figure2">
+                            <EditText
+                                android:id="@+id/chest"
+                                android:layout_width="94dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="6dp"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:text="11"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="107dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@mipmap/bg_figure3">
+                            <EditText
+                                android:id="@+id/waistline"
+                                android:layout_width="94dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="6dp"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:text="11"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="107dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/bg_figure4">
+                            <EditText
+                                android:id="@+id/hipline"
+                                android:layout_width="94dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="6dp"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:text="11"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="107dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@mipmap/bg_figure5">
+                            <EditText
+                                android:id="@+id/shoe_size"
+                                android:layout_width="94dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="6dp"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:text="11"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="168dp"
+                            android:layout_height="107dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/bg_figure6">
+                            <EditText
+                                android:id="@+id/bra_size"
+                                android:layout_width="94dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="6dp"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:text="11"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="345dp"
+                    android:layout_height="158dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@mipmap/bg_figure_skin">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="70dp"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/figure1"
+                            android:layout_width="66dp"
+                            android:layout_height="78dp"
+                            android:background="@mipmap/bg_figure_skin1"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="70dp"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/figure2"
+                            android:layout_width="66dp"
+                            android:layout_height="78dp"
+                            android:background="@mipmap/bg_figure_skin2"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="70dp"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/figure3"
+                            android:layout_width="66dp"
+                            android:layout_height="78dp"
+                            android:background="@mipmap/bg_figure_skin3"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="70dp"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/figure4"
+                            android:layout_width="66dp"
+                            android:layout_height="78dp"
+                            android:background="@mipmap/bg_figure_skin4"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                
+                
+                <ImageView
+                    android:id="@+id/submit"
+                    android:layout_width="345dp"
+                    android:layout_height="47dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:background="@mipmap/btn_confirm"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+
+</layout>

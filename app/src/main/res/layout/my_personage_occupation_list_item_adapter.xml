@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginBottom="13dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="薪酬"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginRight="30dp"/>
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="请输入"
+            android:textColorHint="#80B5FF"
+            android:textColor="#80B5FF"
+            android:background="@color/transparent"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"/>
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="23dp"
+            android:background="@mipmap/ic_bias"/>
+        <TextView
+            android:id="@+id/units"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:hint="请选择"
+            android:textColorHint="#80B5FF"
+            android:layout_marginLeft="43dp"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:textColor="#80B5FF"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="18dp"
+            android:background="@mipmap/btn_delete"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

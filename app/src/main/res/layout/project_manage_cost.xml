@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/shape_bottom_left_right_15"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/add_occupation"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@mipmap/btn_add_centre" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/horizontalOccupation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/svscrollouter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="355dp"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+
+                        android:layout_gravity="center_horizontal"
+                        >
+                        <RelativeLayout
+                            android:id="@+id/contentAddWrap"
+                            android:layout_width="355dp"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:minHeight="100dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/shape_white_30_corner"
+                            android:visibility="visible"
+                            >
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="44dp"
+                                android:layout_marginBottom="30dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="40dp"
+                                            android:layout_height="67dp"
+                                            android:src="@mipmap/ic_project_cost1"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="1223"
+                                            android:textColor="#FF000000"
+                                            android:textStyle="bold"
+                                            android:textSize="22sp"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="67dp"
+                                        android:src="@mipmap/ic_project_cost2"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1223"
+                                        android:textColor="#FF000000"
+                                        android:textStyle="bold"
+                                        android:textSize="22sp"/>
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@mipmap/line_project_flow_sample_upload_item_bg"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.ming.sjll.ui.CustomRoundAngleImageView
+            android:id="@+id/headImage"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="22dp"
+            android:src="@mipmap/ic_launcher"
+            custom:radius="15dp"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#FF000000"
+                android:textStyle="bold"
+                android:text="222"
+                android:layout_marginBottom="14dp"/>
+            <TextView
+                android:id="@+id/occupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#FF000000"
+                android:textStyle="bold"
+                android:text="222"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/openChar"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/btn_chat2"/>
+    </LinearLayout>
+</LinearLayout>

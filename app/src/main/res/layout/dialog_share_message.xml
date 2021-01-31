@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_bar" bind:viewModel="@{titleViewModel}" />
+
+        <RelativeLayout
+            android:layout_width="345dp"
+            android:layout_height="35dp"
+            android:background="@mipmap/bg_search2"
+            android:layout_gravity="center"
+            >
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="45dp"
+                android:maxLength="11"
+                android:textColor="#000"
+                android:textCursorDrawable="@color/LL_CCFFFF"
+                android:background="@null"
+                android:inputType="text"
+                android:text=""
+                android:textStyle="normal"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_my_colleague"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"/>
+
+
+            <LinearLayout
+                android:layout_width="333dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="34dp"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/bg_btn_blue">
+                <TextView
+                    android:id="@+id/send"
+                    android:layout_width="333dp"
+                    android:layout_height="53dp"
+                    android:text="確定"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@id/rc_item_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="355dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="39dp"
+                android:background="@drawable/shape_left_right_corner">
+                <ImageView
+                    android:id="@+id/rc_unread_message_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/shape_all_corner"
+                    android:backgroundTint="@color/red"
+                 />
+
+                <io.rong.imkit.widget.ProviderContainerView
+                    android:id="@+id/rc_content"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="66dp"
+
+                    android:background="@android:color/transparent" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:background="@mipmap/chat_head_bg" />
+            <io.rong.imkit.widget.AsyncImageView
+                android:id="@+id/header"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:layout_marginTop="6dp"
+                bind:RCShape="circle"
+                android:layout_marginLeft="25dp"
+                bind:RCDefDrawable="@drawable/rc_default_portrait" />
+
+
+           <!-- <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/header"
+                android:layout_marginTop="6dp"
+                android:layout_toLeftOf="@+id/joinData"
+                android:layout_toRightOf="@+id/header"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="#ff000000"
+                android:textSize="14sp"
+                tools:text="Riley Catherine" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/header"
+                android:layout_toLeftOf="@+id/joinData"
+                android:layout_toRightOf="@+id/header"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="#7F7F7F"
+                android:textSize="14sp"
+                tools:text="我有一个需求，不知合不合适你" />
+
+            <TextView
+                android:id="@+id/joinData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:textColor="#B2B2B2"
+                android:textSize="12sp"
+                tools:text="16:42" />-->
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

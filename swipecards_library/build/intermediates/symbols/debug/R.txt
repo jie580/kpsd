@@ -1,0 +1,11 @@
+int attr SwipeFlingStyle 0x7f040001
+int attr max_visible 0x7f040002
+int attr min_adapter_stack 0x7f040003
+int attr rotation_degrees 0x7f040004
+int string app_name 0x7f150001
+int style SwipeFling 0x7f160001
+int[] styleable SwipeFlingAdapterView { 0x7f040001, 0x7f040002, 0x7f040003, 0x7f040004 }
+int styleable SwipeFlingAdapterView_SwipeFlingStyle 0
+int styleable SwipeFlingAdapterView_max_visible 1
+int styleable SwipeFlingAdapterView_min_adapter_stack 2
+int styleable SwipeFlingAdapterView_rotation_degrees 3

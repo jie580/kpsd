@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+
+    android:orientation="vertical">
+
+ <LinearLayout
+     android:layout_width="59dp"
+     android:layout_height="101dp"
+     android:clipChildren="false"
+     android:clipToPadding="false"
+     android:layout_marginRight="5dp"
+     android:layout_marginLeft="5dp"
+     android:layout_marginTop="20dp"
+     android:gravity="center">
+    <RelativeLayout
+        android:layout_width="106dp"
+        android:layout_height="149dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        >
+
+        <ImageView
+            android:id="@+id/imageItemWrap"
+            android:layout_width="106dp"
+            android:layout_height="149dp"
+            android:background="@mipmap/bg_user" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:maxWidth="64dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="71dp"
+            android:text="当前账号号"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            />
+        <com.ming.sjll.ui.CircleImageView
+            android:id="@+id/imageItem"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+ </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--第一部分：伸缩工具栏-->
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:contentScrim="@android:color/transparent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_collapseMode="parallax">
+
+                        <com.ming.sjll.ui.CustomRoundAngleImageView
+                            android:id="@+id/backdrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/top_bg_showcase"
+                            custom:left_bottom_radius="0dp"
+                            custom:right_bottom_radius="0dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="144dp"
+                            android:orientation="horizontal">
+                            <RelativeLayout
+                                android:layout_width="305dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@mipmap/search_bg2">
+
+                                <EditText
+                                    android:id="@+id/searchEdit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="65dp"
+                                    android:background="@null"
+                                    android:gravity="center_vertical"
+                                    android:inputType="text"
+                                    android:maxLength="11"
+                                    android:text=""
+                                    android:textColor="#000"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal" />
+
+                                <ImageView
+                                    android:id="@+id/searchBtn"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerHorizontal="false"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@mipmap/search_bg_icon2" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/filtrateBtn"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="18dp"
+                                android:background="@mipmap/btn_filtrate"/>
+                        </LinearLayout>
+                        <include
+                            android:id="@+id/titleBar"
+                            layout="@layout/title_bar"
+                            app:viewModel="@{titleViewModel}" />
+                    </RelativeLayout>
+                </android.support.design.widget.CollapsingToolbarLayout>
+            </android.support.design.widget.AppBarLayout>
+
+
+            <com.ming.sjll.ui.StickyScrollView
+                android:id="@+id/stickyScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:layout_marginTop="-40dp"
+                android:paddingTop="4dp"
+                android:background="@drawable/shape_top_15_corner"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="100dp">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="11dp"
+
+                                 />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </com.ming.sjll.ui.StickyScrollView>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+
+
+        <!--右侧菜单-->
+        <!--如果是两个抽屉那么layout_gravity属性值不能相同,即一左一右-->
+        <!--现在fitsSystemWindow属性并没有解决右侧菜单初始控件与状态栏重叠问题-->
+        <LinearLayout
+            android:layout_width="329dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@drawable/shape_right_top_bottom_white_30_corner"
+            android:orientation="vertical">
+<!--            android:layout_gravity="end"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="82dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="71dp"
+                    android:paddingBottom="20dp"
+                    android:orientation="vertical">
+
+                    <com.ming.sjll.ui.StickyScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#FF040404"
+                                    android:textSize="14sp"
+                                    android:text="价格区间"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp">
+                                    <EditText
+                                        android:id="@+id/priceMin"
+                                        android:layout_width="108dp"
+                                        android:layout_height="30dp"
+                                        android:gravity="center"
+                                        android:background="@drawable/shape_gray_50_corner"
+                                        android:hint="最低价"
+                                        android:inputType="number"
+                                        android:textSize="12sp"
+                                        android:textColorHint="#FF707070"/>
+                                    <View
+                                        android:layout_width="24dp"
+                                        android:layout_height="3dp"
+                                        android:background="#FF000000"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="22dp"/>
+
+                                    <EditText
+                                        android:id="@+id/priceMax"
+                                        android:layout_width="108dp"
+                                        android:layout_height="30dp"
+                                        android:gravity="center"
+                                        android:layout_marginLeft="22dp"
+                                        android:background="@drawable/shape_gray_50_corner"
+                                        android:hint="最高价"
+                                        android:inputType="number"
+                                        android:textSize="12sp"
+                                        android:textColorHint="#FF707070"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="36dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#FF040404"
+                                    android:textSize="14sp"
+                                    android:text="供应商地区"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp">
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/recyclerCityList"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="10dp"
+                                        app:verticalSpacing="5dp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="36dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FF040404"
+                            android:textSize="14sp"
+                            android:text="品牌"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerBrandList"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:paddingLeft="10dp"
+                                app:verticalSpacing="5dp" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                        </LinearLayout>
+                    </com.ming.sjll.ui.StickyScrollView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dialogTip"
+                    android:layout_width="279dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="123dp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_gray_transparency_30_corner"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/dialogTipText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/white"
+                        android:text="暂无匹配，请选择其他选线"/>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/submitBtn"
+                    android:layout_width="165dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_blue_left_bottom_30_corner"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    />
+                <Button
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="165dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/red"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+</android.support.design.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+</layout>

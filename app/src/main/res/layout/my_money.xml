@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF2F3F7"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/withdrawApply"
+        android:layout_width="363dp"
+        android:layout_height="149dp"
+        android:background="@mipmap/ic_money_guide1">
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="#FFFFFFFF"
+            android:textStyle="bold"
+            android:text="10030"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="67dp"/>
+        
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/projectMoney"
+            android:layout_width="242dp"
+            android:layout_height="149dp"
+            android:background="@mipmap/ic_money_guide2"
+            android:orientation="vertical"
+            >
+
+                <TextView
+                    android:id="@+id/projectAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="#FF0A3FFF"
+                    android:layout_marginTop="49dp"
+                    android:layout_marginLeft="24dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/refund"
+        android:layout_width="124dp"
+        android:layout_height="149dp"
+        android:background="@mipmap/ic_money_guide3"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/pledge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3000"
+            android:textColor="#FF9A9DA8"
+            android:layout_marginTop="49dp"
+            android:layout_marginLeft="24dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            />
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/btnGuide4"
+            android:layout_width="124dp"
+            android:layout_height="149dp"
+            android:background="@mipmap/ic_money_guide4"
+            android:orientation="vertical"
+            >
+
+            <!--        <TextView-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:text="1"-->
+            <!--            android:textColor="#FF0A3FFF"-->
+            <!--            android:layout_marginTop="49dp"-->
+            <!--            android:layout_marginLeft="24dp"-->
+            <!--            android:textSize="16sp"-->
+            <!--            android:textStyle="bold"-->
+            <!--            />-->
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/accountManage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="242dp"
+                android:layout_height="79dp"
+                android:background="@mipmap/ic_money_guide5">
+
+                <TextView
+                    android:id="@+id/companyAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF000000"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="1304033242314214124"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="22dp"
+                    />
+                <ImageView
+                    android:id="@+id/companyAccountNull"
+                    android:layout_width="91dp"
+                    android:layout_height="17dp"
+                    android:src="@mipmap/ic_money_guide5_tip"
+                   android:layout_marginLeft="137dp"
+                    android:layout_marginTop="41dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="242dp"
+                android:layout_height="79dp"
+                android:layout_marginTop="-10dp"
+                android:background="@mipmap/ic_money_guide6">
+
+                <TextView
+                    android:id="@+id/aliPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF000000"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="1304033242314214124"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="22dp"
+                    />
+                <ImageView
+                    android:id="@+id/aliPayNull"
+                    android:layout_width="91dp"
+                    android:layout_height="17dp"
+                    android:src="@mipmap/ic_money_guide6_tip"
+                    android:layout_marginLeft="137dp"
+                    android:layout_marginTop="41dp"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/freezeFunds"
+            android:layout_width="242dp"
+            android:layout_height="149dp"
+            android:background="@mipmap/ic_money_guide7"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/freeze_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#fff"
+                android:layout_marginTop="49dp"
+                android:layout_marginLeft="24dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail"
+            android:layout_width="124dp"
+            android:layout_height="149dp"
+            android:background="@mipmap/ic_money_guide8"
+            android:orientation="vertical"
+            >
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="124dp"
+            android:layout_height="149dp"
+            android:background="@mipmap/ic_money_guide9"
+            android:orientation="vertical"
+            >
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/invoice"
+            android:layout_width="242dp"
+            android:layout_height="149dp"
+            android:background="@mipmap/ic_money_guide10"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/invoiceNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#000"
+                android:layout_marginTop="49dp"
+                android:layout_marginLeft="24dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

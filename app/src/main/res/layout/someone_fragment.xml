@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+>
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFF2F3F7">
+
+        <com.ming.sjll.ui.StickyScrollView
+            android:id="@+id/scrollViewWarp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include
+                    android:id="@+id/titleBar"
+                    layout="@layout/title_bar"
+                    app:viewModel="@{titleViewModel}" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="373dp"
+                            android:layout_height="315dp"
+                            android:layout_gravity="center"
+                            android:background="@mipmap/someone_default">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/updateBgBtn"
+                                    android:layout_width="311dp"
+                                    android:layout_height="62dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="25dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center">
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@mipmap/project_cover_bg" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_centerVertical="true"
+                                        android:textColor="#000"
+                                        android:layout_marginLeft="58dp"
+                                        android:text="图片找人"
+                                        android:textSize="16sp" />
+                                    <LinearLayout
+                                        android:layout_width="107dp"
+                                        android:layout_height="50dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginEnd="6dp"
+                                        android:background="@mipmap/project_cover_btn_bg"
+                                        android:gravity="center"
+                                        android:layout_centerVertical="true"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/updateBtnTxt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_gravity="center_horizontal"
+                                            android:gravity="center"
+                                            android:text="GO"
+                                            android:textColor="@color/LL_F0F0F0"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerList"
+                    android:layout_width="355dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    app:verticalSpacing="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.ming.sjll.ui.StickyScrollView>
+    </LinearLayout>
+
+
+
+</layout>

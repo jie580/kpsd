@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="45dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@mipmap/avatars_login2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="22dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:text="欢迎来到 酷拍商店"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:layout_marginTop="43dp"
+                        android:text="欢迎使用酷拍商店"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:layout_marginTop="20dp"
+                        android:text="
+您将要开始使用的酷拍商店应用是由深圳盛骞网络科技有限公司开发、拥有、运营的视觉行业互联网一站式信息服务平台。本应有的使用需要联网，接入互联网产生的流量费用请咨询当地的网络运营商。"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:layout_marginTop="20dp"
+                        android:text="我们承诺会采取业界先进的安全措施保护您的信息安全。在使用本应用时，我们会向您申请或获取通讯录、定位、相机、相册、日历、麦克风、通知等权限，需要获取设备信息、日志信息用于安全风控和信息发布等基本功能。
+点击“同意并继续使用”，视为您已阅读并同意酷拍商店《用户协议》、《隐私政策》及以上内容。"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/nextPage"
+                android:layout_width="333dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="32dp"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/bg_btn_blue">
+                <TextView
+                    android:layout_width="333dp"
+                    android:layout_height="53dp"
+                    android:text="同意并继续使用"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="退出并关闭coolpai"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#D7DAE5"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

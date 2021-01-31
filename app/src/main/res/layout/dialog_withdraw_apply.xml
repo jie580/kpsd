@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_marginBottom="6dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="354dp"
+        android:layout_height="596dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/ic_bg_wrap">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="提现金额"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_marginTop="27dp"/>
+
+
+            <LinearLayout
+                android:layout_width="301.5dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="41dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:textColor="#0A3FFF"
+                        android:textSize="22sp"
+                        android:inputType="numberDecimal"
+                        android:text=""/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="9dp"
+                    android:background="#FF80B5FF" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="301.5dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可提现余额"
+                android:textColor="#D7DAE5"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/withdrawMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textColor="#D7DAE5"
+                android:layout_marginLeft="14dp"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/btnAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="全部提现"
+                android:textColor="#80B5FF"
+                android:layout_marginLeft="14dp"
+                android:gravity="right"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="78dp"
+                android:textSize="14sp"
+                android:text="1.提现至个人单笔金额不低于1元，不高于10万；提现至公司不限额。 "/>
+
+            <TextView
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:text="1.2.工作日14:00前申请提现预计当日到账，14:00后申请提现预计次工作日到账；非工作日申请提现，预计次工作日到账。实际到账时间会因收款账户不同而有所差异。"/>
+        </LinearLayout>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/submit"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="1dp"
+            android:background="@mipmap/nexe_btn2" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

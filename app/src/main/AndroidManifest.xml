@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ming.sjll">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <!-- 通过GPS得到精确位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 通过网络得到粗略位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 修改WiFi状态. 发起WiFi扫描, 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 访问网络的变化, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 支持A-GPS辅助定位 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".appication.SJLLApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:appComponentFactory">
+
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="k51hidwqk415b"
+            tools:replace="android:value" />
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="667" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="2d90b190eb4018142366e686c9417fb0" />
+
+        <meta-data android:name="TencentMapSDK" android:value="PUEBZ-ZWFWX-USQ47-7SWBM-GKRNJ-GYB2L" />
+
+
+<!--腾讯地图-->
+        <activity android:name=".map.tencent.MyTencentMap"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+        </activity>
+        <activity android:name=".map.tencent.ShowTencentMap"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+        </activity>
+<!--        城市选择-->
+        <activity android:name=".map.selectcity.SelectCityActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <!--&lt;!&ndash;设置入口&ndash;&gt;-->
+        <!--<activity-->
+        <!--android:name=".MainActivity"-->
+        <!--android:launchMode="singleTask">-->
+        <!--<intent-filter tools:ignore="AppLinkUrlError">-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--&lt;!&ndash;<action android:name="android.intent.action.VIEW"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<category android:name="android.intent.category.DEFAULT"/>&ndash;&gt;-->
+        <!--<data android:mimeType="application/pdf" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+<!--融云-->
+        <!--   聊天界面-->
+        <activity
+            android:name=".Message.MessageChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="${applicationId}"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+
+
+        </activity>
+        <receiver
+            android:name=".Message.receiver.SealNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.THIRD_PARTY_PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+
+<!--        <activity-->
+<!--            android:name="io.rong.fast.activity.ConversationActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustResize">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+
+<!--                <data-->
+<!--                    android:host="${applicationId}"-->
+<!--                    android:pathPrefix="/conversation/"-->
+<!--                    android:scheme="rong" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <activity
+            android:name="io.rong.fast.activity.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="${applicationId}"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <!--设置入口-->
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+
+<!--            android:screenOrientation="portrait"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:windowSoftInputMode="adjustResize">-->
+<!--&lt;!&ndash;            <intent-filter tools:ignore="AppLinkUrlError">&ndash;&gt;-->
+<!--&lt;!&ndash;                <action android:name="android.intent.action.VIEW" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <category android:name="android.intent.category.DEFAULT" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <data android:mimeType="application/pdf" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </intent-filter>&ndash;&gt;-->
+<!--            <intent-filter tools:ignore="AppLinkUrlError">-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity
+            android:name=".login.CodeActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".login.InputPhoneActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+
+        <activity
+            android:name=".Share.ShareMessageActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity><!--分享到消息-->
+
+
+        <activity
+            android:name=".login.WelcomeActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+            </intent-filter>
+        </activity><!--启动页-->
+        <activity android:name=".map.MapMainActivity" /><!--地图选择-->
+        <activity android:name=".Image.ImagePagerActivity" /><!--地图选择-->
+
+        <activity
+            android:name=".login.LoginActivity"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity><!--登录-->
+        <activity
+            android:name=".login.LoginPwdActivity"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity><!--密码登录-->
+        <activity
+            android:name=".login.RegPwdActivity"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity><!--注册页面1-->
+        <activity
+            android:name=".login.RegNameActivity"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity><!--注册页面1-->
+
+
+        <activity
+            android:name=".Home.HomeFragemt"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity><!--主页-->
+        <activity
+            android:name=".Show.ShowFragemt"
+            android:windowSoftInputMode="stateHidden">
+        </activity><!--Show-->
+        <activity
+            android:name=".My.personage.PersonageOccupation"
+            android:launchMode="singleTop"
+
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:screenOrientation="portrait"
+         >
+        </activity><!--个人中心-个人-职业-->
+
+
+        <activity
+            android:name=".Message.Messagefragemt"
+            android:windowSoftInputMode="stateHidden"></activity><!--消息-->
+
+
+        <activity
+            android:name=".search.SearchFragment"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity><!--搜索页项目-->
+        <activity
+            android:name=".search.CompanyFragment"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity><!--搜索页公司-->
+
+        <activity
+            android:name=".search.GoodsFragment"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity><!--搜索页商品-->
+
+        <activity
+            android:name=".project.ReleaseProject"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan"></activity><!--发布项目-->
+        <activity
+            android:name=".project.ReleaseProjectCover"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden"></activity><!--发布项目-选择封面-->
+        <activity
+            android:name=".project.ReleaseProjectNext"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden"></activity><!--发布项目-推送-->
+
+        <activity
+            android:name=".project.MyProjectFragment"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity><!--发布项目-推送-->
+
+
+
+        <activity
+            android:name=".My.common.SampleEdit"
+            android:windowSoftInputMode="stateHidden">
+        </activity><!--編輯作品-->
+
+        <activity
+            android:name=".My.personage.PersonageTag"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity><!--标签-->
+
+        <!-- 人脸跟踪采集界面 -->
+        <activity
+            android:name=".My.personage.PersonageFacial"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            />
+        <!-- 人脸跟踪采集界面 -->
+        <activity
+            android:name=".My.personage.FaceDetectExpActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".My.personage.MyCompany"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".My.common.Setting"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".base.webview.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".My.homepage.HomepageActivity"
+            android:launchMode="singleTask"
+            />
+<!--        <activity-->
+<!--            android:name=".My.homepage.HomepageActivity"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">-->
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.VIEW" />-->
+
+<!--            <category android:name="android.intent.category.DEFAULT" />-->
+
+<!--&lt;!&ndash;            <data&ndash;&gt;-->
+<!--&lt;!&ndash;                android:host="${applicationId}"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:pathPrefix="/conversation/"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:scheme="rong" />&ndash;&gt;-->
+<!--        </intent-filter>-->
+<!--        </activity>-->
+
+        <activity
+            android:name=".Message.UploadPdfMessageActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            >
+<!--            <intent-filter tools:ignore="AppLinkUrlError">-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <data android:mimeType="application/pdf" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+
+        <activity
+            android:name=".My.company.ShowcaseServiceSelectTimeActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            />
+        <activity
+            android:name=".My.company.ShowcaseGoodsSelectTimeActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            />
+        <activity
+            android:name=".My.company.ShowcaseAddActivity"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".My.company.CompanyInfo"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".My.company.CompanyAuth"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".My.company.CompanyClerk"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".My.company.ShowcaseListActivity"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".My.company.ShowcaseAddTwoActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.company.ShowcaseInfoActivity"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".search.CompanyMemberFragment"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity
+            android:name=".someone.FindFragment"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".someone.FindListFragment"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".someone.FindListProjectInfo"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".search.SearchOccupationFragment"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".My.personage.PersonageFigure"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".search.SelectMemberFragment"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".project.manage.HomeActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".project.flow.HomeActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".search.SearchMemberProjectMultipleActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".project.manage.TimeEditActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".My.company.ShowcaseJoinProjectActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.company.ShowcaseJoinProjectDateActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".project.manage.ProjectTimeActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".project.manage.TeamRecruitActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".My.common.OrderPersonage"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".My.common.OrderCompanyWrap"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".My.common.OrderCompanyGoodsInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.common.OrderCompanyServiceInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.common.OrderCompanyOrderInfo"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+
+        <activity
+            android:name=".My.common.OrderPaymentWrap"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".My.common.MoneyEditAccount"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".My.common.MoneyInvoice"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.common.MoneyInvoiceList"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.common.MoneyInvoiceEdit"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.common.MoneyDetail"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.common.MoneyInvoiceSelectProject"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.common.MoneyInvoiceSelectInvoice"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".My.personage.WorksEdit"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <activity
+            android:name=".pay.HomePay"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".pay.CompanyPay"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".My.company.CompanyMember"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+
+
+    </application>
+
+</manifest>

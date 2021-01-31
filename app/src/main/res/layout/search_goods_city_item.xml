@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp">
+        <TextView
+            android:id="@+id/contentText"
+            android:layout_width="108dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@drawable/shape_blue_50_corner"
+            android:text="本市"
+            android:textSize="12sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+<!--    <TextView-->
+<!--        android:layout_width="108dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:gravity="center"-->
+<!--        android:background="@drawable/shape_gray_50_corner"-->
+<!--        android:layout_marginLeft="22dp"-->
+<!--        android:textSize="12sp"-->
+<!--        android:text="其他地区"-->
+<!--        android:textColor="#FF707070"/>-->
+</LinearLayout>

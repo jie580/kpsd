@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_bar"
+            app:viewModel="@{titleViewModel}" />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+                <EditText
+                    android:id="@+id/searchEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="65dp"
+                    android:maxLength="11"
+                    android:background="@mipmap/search_bg"
+                    android:textColor="#ffffff"
+                    android:inputType="text"
+                    android:text=""
+                    android:textStyle="normal"
+                    android:textCursorDrawable="@drawable/cursor_search"
+                    android:textSelectHandle="@drawable/cursor_search_center"
+                    android:textSelectHandleLeft="@drawable/cursor_search_left"
+                    android:textSelectHandleRight="@drawable/cursor_search_right"
+                    android:textSize="18sp" />
+                    <ImageView
+                        android:id="@+id/searchBtn"
+                        android:layout_width="29.59dp"
+                        android:layout_height="27.72dp"
+                        android:background="@mipmap/search_bg_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="false"
+                        android:layout_marginStart="20dp"
+                        />
+
+        </RelativeLayout>
+
+
+        <com.ming.sjll.ui.PagedListView
+            android:id="@+id/control_main_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+</layout>

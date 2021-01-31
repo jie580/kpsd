@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message"
+    android:layout_width="212dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:lines="2"
+            android:textColor="#0A3FFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="对方申请加入 Lucas Waka-matsu 新品摄影" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_apply"
+            android:textColor="#ff000000"
+            android:textSize="14sp"
+            tools:text="已接受" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+com.lorentzos.flingswipe
+attr SwipeFlingStyle
+attr max_visible
+attr min_adapter_stack
+attr rotation_degrees
+string app_name
+style SwipeFling
+styleable SwipeFlingAdapterView SwipeFlingStyle max_visible min_adapter_stack rotation_degrees

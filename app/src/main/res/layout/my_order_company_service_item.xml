@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/warp"
+        android:layout_width="373dp"
+        android:layout_height="393dp"
+        android:background="@mipmap/line_input_bg_big17"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginLeft="19dp">
+
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="74dp"
+                android:scaleType="centerCrop"
+                custom:radius="5dp"
+                android:src="@mipmap/ic_launcher"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="春季产品拍摄"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="#FF000000"
+                        android:textSize="16sp"/>
+
+                    <Button
+                        android:id="@+id/moneyBtn"
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:background="@mipmap/btn_more"
+                        android:layout_gravity="right"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易金额"
+                        android:textColor="#FF000000"
+                        android:textSize="16sp"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="4000"
+                        android:gravity="left"
+                        android:textColor="#FF000000"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12月5日-12月5日"
+                        android:textColor="#FFD7DAE5"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/memberListWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务关联人员"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/openInfo"
+                android:layout_width="114dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="62dp"
+                android:layout_marginRight="18dp"
+                android:background="@mipmap/btn_look_project"/>
+            <TextView
+                android:id="@+id/countDown"
+                android:layout_width="160dp"
+                android:layout_height="33dp"
+                android:background="@drawable/shape_red_30_corner"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="确认加入 | 59m59s"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="315dp"
+            android:layout_height="1.5dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_line_halving"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.ming.sjll.ui.CustomRoundAngleImageView
+                android:id="@+id/headImage"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="22dp"
+                android:src="@mipmap/ic_launcher"
+                custom:radius="6dp"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#FF000000"
+                    android:textStyle="bold"
+                    android:text="222"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:id="@+id/occupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#FF000000"
+                    android:textStyle="bold"
+                    android:text="222"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/contentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#80B5FF"
+                android:textSize="16sp"
+                android:background="@drawable/shape_left_right_normal_tag"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textStyle="bold"
+                android:layout_marginRight="19dp"
+                android:layout_marginLeft="2dp"
+                android:text="联系对方"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

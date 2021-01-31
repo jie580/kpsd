@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="titleViewModel"
+            type="com.ming.sjll.base.viewmodel.ToolbarViewModel" />
+    </data>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/my_project_bg" />
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/title_bar"
+                app:viewModel="@{titleViewModel}" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="93dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_top_left_right_15">
+
+
+                <ImageView
+                    android:id="@+id/project_list_type1"
+                    android:layout_width="106dp"
+                    android:layout_height="106dp"
+                    android:scaleType="center"
+                    android:button="@null"
+                    android:checked="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/my_project_list_switch" />
+
+                <ImageView
+                    android:id="@+id/project_list_type2"
+                    android:layout_width="106dp"
+                    android:layout_height="106dp"
+                    android:scaleType="center"
+                    android:button="@null"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/my_project_list_switch2" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp">-->
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:gravity="left|center_vertical"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_marginStart="35dp"-->
+        <!--android:textColor="@color/LL_000000"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="16dp"-->
+        <!--android:text="需求" /> <TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:gravity="left|center_vertical"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_marginStart="35dp"-->
+        <!--android:textColor="@color/LL_000000"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="16dp"-->
+        <!--android:text="需求" /> <TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:gravity="left|center_vertical"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_marginStart="35dp"-->
+        <!--android:textColor="@color/LL_000000"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="16dp"-->
+        <!--android:text="需求" /> <TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:gravity="left|center_vertical"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_marginStart="35dp"-->
+        <!--android:textColor="@color/LL_000000"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="16dp"-->
+        <!--android:text="需求" />-->
+        <!--</LinearLayout>-->
+        <!--</ScrollView>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<!--            <com.ming.sjll.ui.StickyScrollView-->
+<!--                android:id="@+id/scrollViewWarp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_gravity="fill_vertical"-->
+<!--                android:layout_marginTop="-20dp"-->
+<!--                android:fillViewport="true"-->
+<!--                android:paddingTop="5dp">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.ming.sjll.ui.AboutHeightViewpager
+                        android:id="@+id/projectList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+<!--            </com.ming.sjll.ui.StickyScrollView>-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/submit"-->
+<!--                android:layout_width="345dp"-->
+<!--                android:layout_height="47dp"-->
+
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:background="@mipmap/btn_push" />-->
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</layout>
